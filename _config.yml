@@ -1,7 +1,7 @@
 title: Sun Lab
 description: A Jekyll website for a university research group.
-url: ""
-baseurl: ""
+url: "https://sunlab-rutgers.github.io"
+baseurl: "/sunlab"
 lang: en
 timezone: America/New_York
 
