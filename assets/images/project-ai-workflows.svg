@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Human AI workflow figure</title>
+  <desc id="desc">A blue workflow diagram connecting a person, model, and document.</desc>
+  <rect width="640" height="360" fill="#edf7ff"/>
+  <circle cx="176" cy="154" r="54" fill="#236fae"/>
+  <circle cx="176" cy="95" r="28" fill="#a8d7f7"/>
+  <rect x="123" y="205" width="106" height="42" rx="21" fill="#236fae"/>
+  <rect x="274" y="90" width="92" height="170" rx="24" fill="#164b79"/>
+  <circle cx="320" cy="145" r="18" fill="#ffffff"/>
+  <circle cx="320" cy="205" r="18" fill="#ffffff"/>
+  <path d="M320 163v24" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <rect x="438" y="88" width="86" height="176" rx="12" fill="#ffffff" stroke="#9bc8e8" stroke-width="5"/>
+  <path d="M462 130h38M462 162h38M462 194h28" stroke="#4f8fcf" stroke-width="10" stroke-linecap="round"/>
+  <path d="M230 169h42M366 169h70" stroke="#6db4e8" stroke-width="12" stroke-linecap="round" stroke-dasharray="1 22"/>
+</svg>

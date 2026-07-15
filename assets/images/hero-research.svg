@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Blue research lab illustration</title>
+  <desc id="desc">Abstract research workspace with people, connected data points, and scientific charts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9efff"/>
+      <stop offset="0.55" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#b9dcf8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0" stop-color="#236fae"/>
+      <stop offset="1" stop-color="#6db4e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <rect x="88" y="88" width="724" height="430" rx="34" fill="#ffffff" stroke="#b9d5ec" stroke-width="4"/>
+  <rect x="132" y="134" width="302" height="248" rx="24" fill="url(#panel)"/>
+  <path d="M170 318c55-80 102-88 144-36 42 51 60 4 88-62" fill="none" stroke="#e8f6ff" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="170" cy="318" r="15" fill="#ffffff"/>
+  <circle cx="314" cy="282" r="15" fill="#ffffff"/>
+  <circle cx="402" cy="220" r="15" fill="#ffffff"/>
+  <rect x="486" y="146" width="244" height="28" rx="14" fill="#d8eaf8"/>
+  <rect x="486" y="196" width="178" height="28" rx="14" fill="#d8eaf8"/>
+  <rect x="486" y="246" width="222" height="28" rx="14" fill="#d8eaf8"/>
+  <rect x="486" y="322" width="64" height="96" rx="14" fill="#236fae"/>
+  <rect x="572" y="284" width="64" height="134" rx="14" fill="#4f9fda"/>
+  <rect x="658" y="238" width="64" height="180" rx="14" fill="#91c8ed"/>
+  <circle cx="270" cy="522" r="58" fill="#164b79"/>
+  <circle cx="270" cy="446" r="32" fill="#8dc2ec"/>
+  <rect x="214" y="554" width="112" height="42" rx="21" fill="#164b79"/>
+  <circle cx="624" cy="522" r="58" fill="#236fae"/>
+  <circle cx="624" cy="446" r="32" fill="#b8dffa"/>
+  <rect x="568" y="554" width="112" height="42" rx="21" fill="#236fae"/>
+  <path d="M332 516c64-42 154-42 220 0" fill="none" stroke="#4f8fcf" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 24"/>
+</svg>

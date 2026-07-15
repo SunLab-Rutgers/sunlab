@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-labelledby="title desc">
+  <title id="title">Collaborative research meeting</title>
+  <desc id="desc">Blue illustration of researchers collaborating around shared data displays.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e2f3ff"/>
+      <stop offset="0.6" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#bdddf5"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" x2="1">
+      <stop offset="0" stop-color="#164b79"/>
+      <stop offset="1" stop-color="#4f8fcf"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="675" fill="url(#bg)"/>
+  <rect x="92" y="76" width="716" height="386" rx="34" fill="#ffffff" stroke="#b5d3eb" stroke-width="4"/>
+  <rect x="142" y="126" width="296" height="230" rx="24" fill="url(#screen)"/>
+  <rect x="484" y="126" width="236" height="34" rx="17" fill="#d4e9f8"/>
+  <rect x="484" y="184" width="192" height="34" rx="17" fill="#d4e9f8"/>
+  <rect x="484" y="242" width="220" height="34" rx="17" fill="#d4e9f8"/>
+  <path d="M190 290l60-72 54 42 76-96" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#ffffff">
+    <circle cx="190" cy="290" r="12"/>
+    <circle cx="250" cy="218" r="12"/>
+    <circle cx="304" cy="260" r="12"/>
+    <circle cx="380" cy="164" r="12"/>
+  </g>
+  <ellipse cx="450" cy="520" rx="260" ry="46" fill="#c4def1"/>
+  <g>
+    <circle cx="238" cy="470" r="30" fill="#a8d7f7"/>
+    <path d="M184 574c8-47 27-74 54-74s46 27 54 74z" fill="#164b79"/>
+    <circle cx="450" cy="452" r="34" fill="#b9e0fb"/>
+    <path d="M390 574c9-53 30-84 60-84s51 31 60 84z" fill="#236fae"/>
+    <circle cx="662" cy="470" r="30" fill="#a8d7f7"/>
+    <path d="M608 574c8-47 27-74 54-74s46 27 54 74z" fill="#164b79"/>
+  </g>
+  <path d="M292 508c54-34 104-42 150-20M510 488c42-18 78-12 112 18" fill="none" stroke="#6db4e8" stroke-width="9" stroke-linecap="round" stroke-dasharray="1 20"/>
+</svg>

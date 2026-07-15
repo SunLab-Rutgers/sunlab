@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Community sensing figure</title>
+  <desc id="desc">A blue map with sensor points and signal rings.</desc>
+  <rect width="640" height="360" fill="#e7f2fb"/>
+  <path d="M88 244c72-64 132-92 216-52 65 31 116 13 172-42 36-35 72-46 104-28v156H88z" fill="#cbe5f8"/>
+  <path d="M88 244c72-64 132-92 216-52 65 31 116 13 172-42 36-35 72-46 104-28" fill="none" stroke="#236fae" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#164b79">
+    <circle cx="178" cy="218" r="15"/>
+    <circle cx="318" cy="196" r="15"/>
+    <circle cx="472" cy="154" r="15"/>
+  </g>
+  <g fill="none" stroke="#4f8fcf" stroke-width="7" opacity="0.82">
+    <circle cx="178" cy="218" r="38"/>
+    <circle cx="318" cy="196" r="44"/>
+    <circle cx="472" cy="154" r="50"/>
+  </g>
+  <path d="M178 218l140-22 154-42" stroke="#6db4e8" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 18"/>
+</svg>

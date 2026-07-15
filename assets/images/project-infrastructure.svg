@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Research infrastructure figure</title>
+  <desc id="desc">Layered blue data infrastructure with connected nodes.</desc>
+  <rect width="640" height="360" fill="#e7f2fb"/>
+  <rect x="72" y="78" width="496" height="58" rx="18" fill="#164b79"/>
+  <rect x="104" y="154" width="432" height="58" rx="18" fill="#236fae"/>
+  <rect x="136" y="230" width="368" height="58" rx="18" fill="#6db4e8"/>
+  <g fill="#ffffff">
+    <circle cx="136" cy="107" r="12"/>
+    <circle cx="320" cy="107" r="12"/>
+    <circle cx="504" cy="107" r="12"/>
+    <circle cx="184" cy="183" r="12"/>
+    <circle cx="320" cy="183" r="12"/>
+    <circle cx="456" cy="183" r="12"/>
+    <circle cx="240" cy="259" r="12"/>
+    <circle cx="400" cy="259" r="12"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.85">
+    <path d="M136 107h368"/>
+    <path d="M184 183h272"/>
+    <path d="M240 259h160"/>
+  </g>
+</svg>

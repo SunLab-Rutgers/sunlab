@@ -1,0 +1,23 @@
+- title: Resilient Research Infrastructure
+  summary: Building tools that help research teams collect, validate, and share data during fast-moving field studies.
+  image: /assets/images/project-infrastructure.svg
+  tags:
+    - Systems
+    - Data Quality
+    - Collaboration
+
+- title: Human-AI Scientific Workflows
+  summary: Studying how researchers evaluate, adapt, and govern AI assistance in literature review and analysis tasks.
+  image: /assets/images/project-ai-workflows.svg
+  tags:
+    - HCI
+    - AI
+    - Research Methods
+
+- title: Community Sensing Platforms
+  summary: Designing lightweight sensing and reporting systems for community partners working on environmental resilience.
+  image: /assets/images/project-sensing.svg
+  tags:
+    - Civic Tech
+    - Sensing
+    - Visualization

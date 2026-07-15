@@ -1,0 +1,44 @@
+title: Sun Lab
+description: A Jekyll website for a university research group.
+url: ""
+baseurl: ""
+lang: en
+timezone: America/New_York
+
+group:
+  name: Sun Lab
+  tagline: Theoretical Chemistry powered by quantum mechanics, quantum information, and machine learning.
+  institution: Rutgers University
+  department: Department of Chemistry and Chemical Biology
+  email: chong.sun@rutgers.edu
+  address: "123 Bevier Rd., Piscataway, NJ 08854"
+
+nav:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: People
+    url: /people/
+  - title: Publications
+    url: /publications/
+  - title: News
+    url: /news/
+  - title: Contact
+    url: /contact/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+markdown: kramdown
+permalink: /news/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

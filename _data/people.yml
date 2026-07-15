@@ -1,0 +1,27 @@
+- name: Dr. Maya Chen
+  role: Principal Investigator
+  focus: Human-centered AI, scientific workflows, resilient systems
+  email: maya.chen@example.edu
+  website: "#"
+  image: /assets/images/default-user.svg
+
+- name: Jordan Ellis
+  role: PhD Student
+  focus: Interactive tools for research synthesis
+  email: jordan.ellis@example.edu
+  website: "#"
+  image: /assets/images/default-user.svg
+
+- name: Priya Raman
+  role: PhD Student
+  focus: Data visualization and responsible automation
+  email: priya.raman@example.edu
+  website: "#"
+  image: /assets/images/default-user.svg
+
+- name: Luis Ortega
+  role: MS Researcher
+  focus: Field data systems and civic technology
+  email: luis.ortega@example.edu
+  website: "#"
+  image: /assets/images/default-user.svg

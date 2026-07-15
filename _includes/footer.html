@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>{{ site.group.name }}</strong>
+      <p>{{ site.group.department }}<br>{{ site.group.institution }}</p>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <p><a href="mailto:{{ site.group.email }}">{{ site.group.email }}</a><br>{{ site.group.address }}</p>
+    </div>
+    <div>
+      <strong>Explore</strong>
+      <p>
+        <a href="{{ '/research/' | relative_url }}">Research</a><br>
+        <a href="{{ '/publications/' | relative_url }}">Publications</a><br>
+        <a href="{{ '/people/' | relative_url }}">People</a>
+      </p>
+    </div>
+  </div>
+</footer>
