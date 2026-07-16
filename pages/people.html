@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Team
+title: People
 permalink: /people/
 description: Faculty, students, and collaborators in the research group.
+full_width: true
 ---
 
-{% assign member_groups = "pi|PI;postdoc|Postdocs;graduate|Graduate Student;master|Master Student;undergraduate|Undergraduate Student" | split: ";" %}
+{% assign member_groups = "pi|PI;postdoc|Postdocs;graduate|Graduate Students;master|Master Students;undergraduate|Undergraduate Students" | split: ";" %}
 {% assign alumni_page = site.pages | where: "path", "pages/alumni.md" | first %}
 
 {% for group in member_groups %}
@@ -14,7 +15,8 @@ description: Faculty, students, and collaborators in the research group.
 {% assign group_label = group_parts[1] %}
 {% assign people = site.members | where: "category", group_key | sort: "date" %}
 {% if people.size > 0 %}
-<section class="people-section">
+<section class="people-section people-section-{{ group_key }}">
+  <div class="container">
   <h2>{{ group_label }}</h2>
   {% if group_key == "alumni" %}
   <ul class="alumni-list">
@@ -80,12 +82,14 @@ description: Faculty, students, and collaborators in the research group.
     {% endfor %}
   </div>
   {% endif %}
+  </div>
 </section>
 {% endif %}
 {% endfor %}
 
 {% if alumni_page.alumni %}
-<section class="people-section">
+<section class="people-section people-section-alumni">
+  <div class="container">
   <h2>Group Alumni</h2>
   <ul class="alumni-list">
     {% for person in alumni_page.alumni %}
@@ -101,5 +105,6 @@ description: Faculty, students, and collaborators in the research group.
     </li>
     {% endfor %}
   </ul>
+  </div>
 </section>
 {% endif %}

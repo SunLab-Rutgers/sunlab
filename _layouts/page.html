@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<section class="page-content">
-  <div class="container">
+<section class="page-content{% if page.full_width %} page-content-full{% endif %}">
+  <div{% unless page.full_width %} class="container"{% endunless %}>
     {{ content }}
   </div>
 </section>

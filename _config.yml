@@ -18,7 +18,7 @@ nav:
     url: /
   - title: Research
     url: /research/
-  - title: Team
+  - title: People
     url: /people/
     children:
       - title: Chong Sun

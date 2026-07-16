@@ -10,4 +10,4 @@ office: CCB 4308
 image: /assets/images/member_photos/stanley.jpg
 ---
 
-Y. Stanley Tan is a graduate student in the Sun Lab working on strongly correlated electrons and high-performance computing.
+Stanley is a graduate student in the Department of Chemistry and Chemical Biology at Rutgers University. He received a B.S. in chemistry from Stony Brook University. After graduating from Stony Brook, he worked at Frederick National Laboratory for Cancer Research, where he worked on computational methods for drug discovery targeting RAS proteins. He is interested in electronic structure methods and high-performance computing.
