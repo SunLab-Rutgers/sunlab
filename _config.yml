@@ -30,12 +30,20 @@ nav:
 collections:
   posts:
     output: true
+  members:
+    output: true
+    permalink: /people/:title/
 
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+  - scope:
+      path: ""
+      type: members
+    values:
+      layout: member
 
 markdown: kramdown
 permalink: /news/:year/:month/:day/:title/

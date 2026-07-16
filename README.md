@@ -18,10 +18,20 @@ Push this directory to a GitHub repository, then enable Pages in the repository 
 ## Edit Content
 
 - Site settings: `_config.yml`
-- People: `_data/people.yml`
+- People: one file per person in `_members/`
 - Projects: `_data/projects.yml`
 - Publications: `_data/publications.yml`
 - News posts: `_posts/`
 - Pages: `pages/`
 
 Update the people, projects, publications, posts, and contact details as the lab website evolves.
+
+## Adding People
+
+Create one Markdown file per person in `_members/`. The homepage order is controlled by:
+
+- `category`: one of `pi`, `postdoc`, `graduate`, `master`, or `undergraduate`
+- `date`: used to sort people within each category
+- `image`: path to the person photo, usually `/assets/images/member_photos/name.jpg`, or `/assets/images/default-user.svg`
+
+The body text below the front matter becomes the short bio on the member detail page.

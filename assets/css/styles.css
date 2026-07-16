@@ -470,6 +470,20 @@ h3 {
   color: var(--ink);
 }
 
+.people-section {
+  margin-bottom: 42px;
+}
+
+.people-section:last-child {
+  margin-bottom: 0;
+}
+
+.people-section h2 {
+  margin-bottom: 18px;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
 .person-card {
   display: flex;
   gap: 16px;
@@ -511,6 +525,29 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.member-profile {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.member-portrait {
+  width: 220px;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--soft);
 }
 
 .publication-list,
@@ -612,6 +649,14 @@ h3 {
   .section,
   .page-content {
     padding: 52px 0;
+  }
+
+  .member-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .member-portrait {
+    width: min(220px, 100%);
   }
 
   .publication {

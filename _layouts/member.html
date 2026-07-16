@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="page-content member-page">
+  <div class="container narrow">
+    <a class="back-link" href="{{ '/people/' | relative_url }}">Back to people</a>
+    <div class="member-profile">
+      <img class="member-portrait" src="{{ page.image | default: '/assets/images/default-user.svg' | relative_url }}" alt="">
+      <div>
+        <p class="role">{{ page.role }}</p>
+        <h1>{{ page.name | default: page.title }}</h1>
+        {% if page.focus %}
+          <p class="lede">{{ page.focus }}</p>
+        {% endif %}
+        {% if page.email %}
+          <p class="member-email">{{ page.email }}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </div>
+</article>

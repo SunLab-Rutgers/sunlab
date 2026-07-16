@@ -14,21 +14,42 @@ description: We develop computational tools to accelerate the exploration and di
         <a class="button secondary" href="{{ '/contact/' | relative_url }}">Join or Collaborate</a>
       </div>
     </div>
+    {% assign home_slides = site.static_files | where_exp: "file", "file.path contains '/assets/images/home_slides/'" | sort: "path" %}
+    {% assign home_slide_count = 0 %}
+    {% for slide in home_slides %}
+      {% assign slide_ext = slide.extname | downcase %}
+      {% if slide_ext == ".jpg" or slide_ext == ".jpeg" or slide_ext == ".png" or slide_ext == ".webp" or slide_ext == ".gif" or slide_ext == ".svg" %}
+        {% assign home_slide_count = home_slide_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
     <figure class="hero-slideshow" aria-label="Research group image slideshow">
-      <div class="hero-slide is-active">
-        <img src="{{ '/assets/images/hero-research.svg' | relative_url }}" alt="Abstract blue illustration of researchers, data, and scientific systems">
-      </div>
-      <div class="hero-slide">
-        <img src="{{ '/assets/images/hero-collaboration.svg' | relative_url }}" alt="Blue illustration of a collaborative research meeting with shared data displays">
-      </div>
-      <div class="hero-slide">
-        <img src="{{ '/assets/images/hero-fieldwork.svg' | relative_url }}" alt="Blue illustration of field sensing data connected to a research dashboard">
-      </div>
-      <figcaption class="hero-slide-controls" aria-label="Choose slideshow image">
-        <button type="button" class="is-active" aria-label="Show research systems image" aria-current="true"></button>
-        <button type="button" aria-label="Show collaboration image"></button>
-        <button type="button" aria-label="Show fieldwork image"></button>
-      </figcaption>
+      {% assign home_slide_index = 0 %}
+      {% for slide in home_slides %}
+        {% assign slide_ext = slide.extname | downcase %}
+        {% if slide_ext == ".jpg" or slide_ext == ".jpeg" or slide_ext == ".png" or slide_ext == ".webp" or slide_ext == ".gif" or slide_ext == ".svg" %}
+          {% assign home_slide_index = home_slide_index | plus: 1 %}
+          <div class="hero-slide{% if home_slide_index == 1 %} is-active{% endif %}">
+            <img src="{{ slide.path | relative_url }}" alt="">
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if home_slide_count == 0 %}
+        <div class="hero-slide is-active">
+          <img src="{{ '/assets/images/hero-research.svg' | relative_url }}" alt="">
+        </div>
+      {% endif %}
+      {% if home_slide_count > 1 %}
+        <figcaption class="hero-slide-controls" aria-label="Choose slideshow image">
+          {% assign home_slide_index = 0 %}
+          {% for slide in home_slides %}
+            {% assign slide_ext = slide.extname | downcase %}
+            {% if slide_ext == ".jpg" or slide_ext == ".jpeg" or slide_ext == ".png" or slide_ext == ".webp" or slide_ext == ".gif" or slide_ext == ".svg" %}
+              {% assign home_slide_index = home_slide_index | plus: 1 %}
+              <button type="button"{% if home_slide_index == 1 %} class="is-active" aria-current="true"{% endif %} aria-label="Show slideshow image {{ home_slide_index }}"></button>
+            {% endif %}
+          {% endfor %}
+        </figcaption>
+      {% endif %}
     </figure>
   </div>
 </section>

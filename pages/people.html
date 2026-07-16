@@ -1,0 +1,40 @@
+---
+layout: page
+title: People
+permalink: /people/
+description: Faculty, students, and collaborators in the research group.
+---
+
+{% assign member_groups = "pi|PI;postdoc|Postdocs;graduate|Graduate Student;master|Master Student;undergraduate|Undergraduate Student" | split: ";" %}
+
+{% for group in member_groups %}
+{% assign group_parts = group | split: "|" %}
+{% assign group_key = group_parts[0] %}
+{% assign group_label = group_parts[1] %}
+{% assign people = site.members | where: "category", group_key | sort: "date" %}
+{% if people.size > 0 %}
+<section class="people-section">
+  <h2>{{ group_label }}</h2>
+  <div class="people-grid">
+    {% for person in people %}
+    <article class="person-card">
+      <img class="person-photo" src="{{ person.image | default: '/assets/images/default-user.svg' | relative_url }}" alt="">
+      <div>
+        <h3>{{ person.name | default: person.title }}</h3>
+        <p class="role">{{ person.role }}</p>
+        {% if person.focus %}
+        <p>{{ person.focus }}</p>
+        {% endif %}
+        <p class="person-links">
+          {% if person.email %}
+          <span>{{ person.email }}</span>
+          {% endif %}
+          <a href="{{ person.url | relative_url }}">More info</a>
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endfor %}
