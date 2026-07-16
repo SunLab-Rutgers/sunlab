@@ -159,6 +159,10 @@ img {
   border-top: 1px solid var(--line);
 }
 
+.nav-item {
+  position: relative;
+}
+
 .site-nav a {
   position: relative;
   color: var(--muted);
@@ -188,6 +192,47 @@ img {
 .site-nav a:hover::after,
 .site-nav a[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  z-index: 8;
+  display: grid;
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.nav-submenu a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.nav-submenu a::after {
+  display: none;
+}
+
+.nav-submenu a:hover,
+.nav-submenu a[aria-current="page"] {
+  color: var(--brand-dark);
+  background: var(--soft);
+}
+
+.nav-item:hover .nav-submenu,
+.nav-item:focus-within .nav-submenu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
 }
 
 .nav-toggle {
@@ -486,8 +531,26 @@ h3 {
 
 .person-card {
   display: flex;
-  gap: 16px;
-  padding: 22px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.person-card > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: -48px;
+  padding: 64px 22px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(23, 33, 31, 0.05);
+  text-align: center;
 }
 
 .avatar {
@@ -503,14 +566,37 @@ h3 {
 }
 
 .person-photo {
-  flex: 0 0 auto;
+  position: relative;
+  z-index: 2;
   display: block;
-  width: 72px;
-  height: 72px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  width: 180px;
+  height: 180px;
+  border: 6px solid var(--paper);
+  border-radius: 50%;
   object-fit: cover;
   background: var(--soft);
+  box-shadow: 0 12px 28px rgba(23, 33, 31, 0.12);
+}
+
+.alumni-list {
+  display: grid;
+  gap: 10px;
+  max-width: 620px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.alumni-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.alumni-list li > span:last-child {
+  color: var(--muted);
 }
 
 .role,
@@ -524,7 +610,73 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
   margin-bottom: 0;
+}
+
+.person-links > span:first-child {
+  flex-basis: 100%;
+}
+
+.person-actions,
+.person-socials {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.person-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--brand-dark);
+  border-radius: 6px;
+  color: var(--brand-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.person-button:hover {
+  color: white;
+  background: var(--brand-dark);
+}
+
+.social-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  background: white;
+  font-size: 0.76rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.social-icon svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
+.scholar-icon svg path:last-child {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+}
+
+.social-icon:hover {
+  color: white;
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
 }
 
 .back-link {
@@ -537,17 +689,96 @@ h3 {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   gap: 30px;
-  align-items: center;
+  align-items: stretch;
   margin-bottom: 34px;
+}
+
+.member-profile > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-profile h1 {
+  max-width: none;
+  margin-bottom: 16px;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.12;
 }
 
 .member-portrait {
   width: 220px;
+  height: 100%;
+  min-height: 220px;
   aspect-ratio: 1;
   border: 1px solid var(--line);
   border-radius: 8px;
   object-fit: cover;
   background: var(--soft);
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.profile-info-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.profile-info-card h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.profile-info-card p,
+.profile-info-card ul {
+  margin-bottom: 0;
+}
+
+.member-info-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.member-info-box h2 {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.member-info-box p,
+.member-info-box ul {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
+.member-info-box ul {
+  padding-left: 18px;
+}
+
+.member-info-box li {
+  margin-bottom: 4px;
+}
+
+.member-page .post-body h2 {
+  margin-top: 36px;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.member-page .post-body li {
+  margin-bottom: 8px;
 }
 
 .publication-list,
@@ -621,11 +852,26 @@ h3 {
     display: none;
     flex-direction: column;
     align-items: flex-start;
+    gap: 14px;
     padding: 14px 0;
   }
 
   .site-nav.is-open {
     display: flex;
+  }
+
+  .nav-submenu {
+    position: static;
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+    padding: 8px 0 0 14px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
   }
 
   .hero {
@@ -657,6 +903,16 @@ h3 {
 
   .member-portrait {
     width: min(220px, 100%);
+    height: auto;
+    min-height: 0;
+  }
+
+  .profile-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-info-box {
+    grid-template-columns: 1fr;
   }
 
   .publication {

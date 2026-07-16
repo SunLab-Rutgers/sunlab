@@ -22,7 +22,17 @@
     </div>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       {% for item in site.nav %}
-        <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+        {% assign child_urls = item.children | map: "url" %}
+        <div class="nav-item{% if item.children %} has-children{% endif %}">
+          <a href="{{ item.url | relative_url }}" {% if page.url == item.url or child_urls contains page.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% if item.children %}
+            <div class="nav-submenu">
+              {% for child in item.children %}
+                <a href="{{ child.url | relative_url }}" {% if page.url == child.url %}aria-current="page"{% endif %}>{{ child.title }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
       {% endfor %}
     </nav>
   </div>

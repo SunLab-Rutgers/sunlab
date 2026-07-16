@@ -18,8 +18,11 @@ nav:
     url: /
   - title: Research
     url: /research/
-  - title: People
+  - title: Team
     url: /people/
+    children:
+      - title: Chong Sun
+        url: /people/chong-sun/
   - title: Publications
     url: /publications/
   - title: News

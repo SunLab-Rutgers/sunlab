@@ -1,11 +1,12 @@
 ---
 layout: page
-title: People
+title: Team
 permalink: /people/
 description: Faculty, students, and collaborators in the research group.
 ---
 
 {% assign member_groups = "pi|PI;postdoc|Postdocs;graduate|Graduate Student;master|Master Student;undergraduate|Undergraduate Student" | split: ";" %}
+{% assign alumni_page = site.pages | where: "path", "pages/alumni.md" | first %}
 
 {% for group in member_groups %}
 {% assign group_parts = group | split: "|" %}
@@ -15,6 +16,22 @@ description: Faculty, students, and collaborators in the research group.
 {% if people.size > 0 %}
 <section class="people-section">
   <h2>{{ group_label }}</h2>
+  {% if group_key == "alumni" %}
+  <ul class="alumni-list">
+    {% for person in people %}
+    <li>
+      {% if person.url %}
+      <a href="{{ person.url | relative_url }}">{{ person.name | default: person.title }}</a>
+      {% else %}
+      <span>{{ person.name | default: person.title }}</span>
+      {% endif %}
+      {% if person.role %}
+      <span>{{ person.role }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
   <div class="people-grid">
     {% for person in people %}
     <article class="person-card">
@@ -29,12 +46,60 @@ description: Faculty, students, and collaborators in the research group.
           {% if person.email %}
           <span>{{ person.email }}</span>
           {% endif %}
-          <a href="{{ person.url | relative_url }}">More info</a>
+          <span class="person-actions">
+            <a class="person-button" href="{{ person.url | relative_url }}">More info</a>
+            {% if person.website %}
+            <a class="person-button" href="{{ person.website }}">Website</a>
+            {% endif %}
+          </span>
+          {% if person.google_scholar or person.linkedin %}
+          <span class="person-socials">
+            {% if person.google_scholar %}
+            <a class="social-icon scholar-icon" href="{{ person.google_scholar }}" aria-label="Google Scholar profile for {{ person.name | default: person.title }}">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 3 2.5 9.2 12 15.4l9.5-6.2L12 3Z"></path>
+                <path d="M6.8 12.7v3.2c0 2.1 2.3 3.8 5.2 3.8s5.2-1.7 5.2-3.8v-3.2L12 16.1l-5.2-3.4Z"></path>
+                <path d="M19.2 10.6v5.5"></path>
+              </svg>
+            </a>
+            {% endif %}
+            {% if person.linkedin %}
+            <a class="social-icon linkedin-icon" href="{{ person.linkedin }}" aria-label="LinkedIn profile for {{ person.name | default: person.title }}">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M6.8 9.2H3.6v10.1h3.2V9.2Z"></path>
+                <path d="M5.2 4.2a1.85 1.85 0 1 0 0 3.7 1.85 1.85 0 0 0 0-3.7Z"></path>
+                <path d="M10 9.2h3.1v1.4c.5-.8 1.6-1.7 3.3-1.7 3.5 0 4.1 2.3 4.1 5.3v5.1h-3.2v-4.5c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4v4.6H10V9.2Z"></path>
+              </svg>
+            </a>
+            {% endif %}
+          </span>
+          {% endif %}
         </p>
       </div>
     </article>
     {% endfor %}
   </div>
+  {% endif %}
 </section>
 {% endif %}
 {% endfor %}
+
+{% if alumni_page.alumni %}
+<section class="people-section">
+  <h2>Group Alumni</h2>
+  <ul class="alumni-list">
+    {% for person in alumni_page.alumni %}
+    <li>
+      {% if person.url %}
+      <a href="{{ person.url }}">{{ person.name }}</a>
+      {% else %}
+      <span>{{ person.name }}</span>
+      {% endif %}
+      {% if person.role %}
+      <span>{{ person.role }}</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

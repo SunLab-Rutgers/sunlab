@@ -4,17 +4,38 @@ layout: default
 
 <article class="page-content member-page">
   <div class="container narrow">
-    <a class="back-link" href="{{ '/people/' | relative_url }}">Back to people</a>
     <div class="member-profile">
       <img class="member-portrait" src="{{ page.image | default: '/assets/images/default-user.svg' | relative_url }}" alt="">
       <div>
         <p class="role">{{ page.role }}</p>
         <h1>{{ page.name | default: page.title }}</h1>
-        {% if page.focus %}
-          <p class="lede">{{ page.focus }}</p>
-        {% endif %}
-        {% if page.email %}
-          <p class="member-email">{{ page.email }}</p>
+        {% if page.office or page.phone or page.email or page.education %}
+          <div class="member-info-box">
+            {% if page.office or page.phone or page.email %}
+              <div>
+                <h2>Contact</h2>
+                {% if page.office %}
+                  <p><strong>Office:</strong> {{ page.office }}</p>
+                {% endif %}
+                {% if page.phone %}
+                  <p><strong>Phone:</strong> {{ page.phone }}</p>
+                {% endif %}
+                {% if page.email %}
+                  <p><strong>Email:</strong> {{ page.email }}</p>
+                {% endif %}
+              </div>
+            {% endif %}
+            {% if page.education %}
+              <div>
+                <h2>Education</h2>
+                <ul>
+                  {% for item in page.education %}
+                    <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
         {% endif %}
       </div>
     </div>
