@@ -5,12 +5,6 @@ permalink: /teaching/
 description: Courses, guest lectures, and teaching materials from the Sun Lab.
 ---
 
-<section class="teaching-intro">
-  <p class="eyebrow">Teaching</p>
-  <h1>Chemistry, computation, and quantum science in the classroom.</h1>
-  <p>Courses and lecture materials from the Sun Lab emphasize practical computational skills, physical insight, and modern tools for chemical discovery.</p>
-</section>
-
 <div class="teaching-grid">
   <article class="teaching-card teaching-card-featured">
     <div class="teaching-feature-content">

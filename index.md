@@ -57,8 +57,7 @@ description: We develop computational tools to accelerate the exploration and di
 <section class="section">
   <div class="container split">
     <div>
-      <p class="eyebrow">Research</p>
-      <h2>Computational tools for quantum chemistry and materials discovery.</h2>
+      <a class="eyebrow eyebrow-link" href="{{ '/research/' | relative_url }}">Research</a>
     </div>
     <div class="stack">
       {% assign projects = site.research | sort: "order" %}

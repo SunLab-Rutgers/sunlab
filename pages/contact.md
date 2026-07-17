@@ -7,7 +7,6 @@ description: Get in touch about collaborations, graduate research, or joining th
 
 <section class="join-section">
   <div class="section-heading">
-    <p class="eyebrow">Open Positions</p>
     <h2>Joining the Sun Lab</h2>
     <p>Thank you for your interest in our research group. Please review the information below if you are considering joining our team.</p>
   </div>
