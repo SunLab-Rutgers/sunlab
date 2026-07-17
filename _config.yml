@@ -40,6 +40,8 @@ collections:
     permalink: /people/:title/
   research:
     output: false
+  publications:
+    output: false
 
 defaults:
   - scope:

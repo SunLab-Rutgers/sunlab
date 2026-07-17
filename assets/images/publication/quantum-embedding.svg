@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Quantum embedding schematic</title>
+  <desc id="desc">Abstract computational chemistry figure with lattice nodes, embedding region, and thermal orbitals.</desc>
+  <rect width="800" height="600" fill="#f7f2ea"/>
+  <path d="M0 420 C130 360 220 470 350 405 S590 325 800 390 V600 H0 Z" fill="#eadfce"/>
+  <g stroke="#b9c6d3" stroke-width="3">
+    <path d="M145 170 L280 115 L430 170 L555 115 L670 180"/>
+    <path d="M145 300 L280 245 L430 300 L555 245 L670 310"/>
+    <path d="M145 170 L145 300 M280 115 L280 245 M430 170 L430 300 M555 115 L555 245 M670 180 L670 310"/>
+  </g>
+  <g fill="#0d2640">
+    <circle cx="145" cy="170" r="18"/>
+    <circle cx="280" cy="115" r="18"/>
+    <circle cx="430" cy="170" r="18"/>
+    <circle cx="555" cy="115" r="18"/>
+    <circle cx="670" cy="180" r="18"/>
+    <circle cx="145" cy="300" r="18"/>
+    <circle cx="280" cy="245" r="18"/>
+    <circle cx="430" cy="300" r="18"/>
+    <circle cx="555" cy="245" r="18"/>
+    <circle cx="670" cy="310" r="18"/>
+  </g>
+  <circle cx="430" cy="235" r="120" fill="none" stroke="#cc0033" stroke-width="12"/>
+  <circle cx="430" cy="235" r="82" fill="rgba(204,0,51,0.12)" stroke="#cc0033" stroke-width="3"/>
+  <g fill="none" stroke="#cc0033" stroke-linecap="round" stroke-width="10">
+    <path d="M332 435 C380 382 464 382 512 435"/>
+    <path d="M356 475 C392 438 452 438 488 475"/>
+    <path d="M385 510 C406 488 438 488 459 510"/>
+  </g>
+  <text x="400" y="545" fill="#0d2640" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">DMET</text>
+</svg>

@@ -5,16 +5,24 @@ permalink: /publications/
 description: Selected papers and research outputs.
 ---
 
-{% assign groups = "Preprints|Patent|Peer-reviewed" | split: "|" %}
+{% assign groups = "preprint|Preprints,patent|Patent,peer_reviewed|Peer-reviewed" | split: "," %}
 
 {% for group in groups %}
-{% assign pubs = site.data.publications | where: "category", group | sort: "number" | reverse %}
+{% assign group_parts = group | split: "|" %}
+{% assign group_key = group_parts[0] %}
+{% assign group_label = group_parts[1] %}
+{% assign pubs = site.publications | where: "category", group_key | sort: "added" | reverse %}
 {% if pubs.size > 0 %}
 <section class="publication-section">
-  <h2>{{ group }}</h2>
+  <h2>{{ group_label }}</h2>
   <div class="publication-list">
     {% for pub in pubs %}
-    <article class="publication">
+    <article class="publication{% if pub.image %} publication-with-image{% endif %}">
+      {% if pub.image %}
+      <div class="publication-figure">
+        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
+      </div>
+      {% endif %}
       <p class="pub-year">{{ pub.year }}</p>
       <div>
         <h3>{{ pub.title }}</h3>
@@ -22,7 +30,7 @@ description: Selected papers and research outputs.
         <p class="venue">{{ pub.venue }}</p>
         <p class="pub-links">
           {% for link in pub.links %}
-          <a href="{{ link[1] }}">{{ link[0] | capitalize }}</a>
+          <a href="{{ link.url }}">{{ link.label }}</a>
           {% endfor %}
         </p>
       </div>

@@ -1111,6 +1111,25 @@ h3 {
   padding: 24px;
 }
 
+.publication-with-image {
+  grid-template-columns: 180px 72px 1fr;
+  align-items: start;
+}
+
+.publication-figure {
+  overflow: hidden;
+  border: 1px solid rgba(13, 38, 64, 0.1);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.publication-figure img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
 .publication h3,
 .news-row h2,
 .person-card h2 {
@@ -1255,6 +1274,14 @@ h3 {
 
   .publication {
     grid-template-columns: 1fr;
+  }
+
+  .publication-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-figure {
+    max-width: 260px;
   }
 }
 

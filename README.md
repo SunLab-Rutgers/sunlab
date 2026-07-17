@@ -20,7 +20,7 @@ Push this directory to a GitHub repository, then enable Pages in the repository 
 - Site settings: `_config.yml`
 - People: one file per person in `_members/`
 - Projects: `_data/projects.yml`
-- Publications: `_data/publications.yml`
+- Publications: one file per publication in `_publications/preprint/`, `_publications/patent/`, or `_publications/peer_reviewed/`
 - News posts: `_posts/`
 - Pages: `pages/`
 
