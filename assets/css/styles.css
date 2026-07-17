@@ -558,13 +558,35 @@ h3 {
 
 .teaching-card-featured {
   grid-column: 1 / -1;
+  min-height: 0;
   background: var(--soft);
+}
+
+.teaching-feature-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(180px, 0.65fr);
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+}
+
+.teaching-feature-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.teaching-logo-panel {
+  display: grid;
+  place-items: center;
+  min-height: 250px;
+  padding: 18px;
 }
 
 .teaching-logo {
   display: block;
-  width: min(100%, 220px);
-  margin: 18px auto 0;
+  width: min(100%, 260px);
+  margin: 0;
   object-fit: contain;
 }
 
@@ -652,7 +674,11 @@ h3 {
 }
 
 .join-section {
-  margin-top: 56px;
+  margin-top: 0;
+}
+
+.join-section .eyebrow {
+  color: #cc0033;
 }
 
 .join-section .section-heading p:last-child {
@@ -679,9 +705,14 @@ h3 {
   background: var(--soft);
 }
 
+.join-stack {
+  display: grid;
+  gap: 18px;
+}
+
 .join-label {
   margin-bottom: 12px;
-  color: var(--brand-dark);
+  color: #cc0033;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1159,6 +1190,16 @@ h3 {
 
   .teaching-card-featured {
     grid-row: auto;
+  }
+
+  .teaching-feature-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .teaching-logo-panel {
+    min-height: 0;
+    padding: 4px 0 0;
   }
 
   .hero-slide img {

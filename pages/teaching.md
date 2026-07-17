@@ -13,20 +13,24 @@ description: Courses, guest lectures, and teaching materials from the Sun Lab.
 
 <div class="teaching-grid">
   <article class="teaching-card teaching-card-featured">
-    <div>
-      <p class="teaching-term">Offered every Spring semester</p>
-      <h2>CHEM 487/542</h2>
-      <p class="teaching-subtitle">Special Topics in Physical Chemistry: Chemical Data Science</p>
-      <p>This course explores data science and artificial intelligence with a focus on chemistry applications, combining lectures with hands-on computational lab sessions.</p>
-      <img class="teaching-logo" src="{{ '/assets/images/teaching/course_logo2.png' | relative_url }}" alt="CHEM 487/542 Chemical Data Science course logo">
+    <div class="teaching-feature-content">
+      <div class="teaching-feature-copy">
+        <p class="teaching-term">Offered every Spring semester</p>
+        <h2>CHEM 487/542</h2>
+        <p class="teaching-subtitle">Special Topics in Physical Chemistry: Chemical Data Science</p>
+        <p>This course explores data science and artificial intelligence with a focus on chemistry applications, combining lectures with hands-on computational lab sessions.</p>
+        <div class="teaching-meta">
+          <span>Machine learning</span>
+          <span>Chemical data</span>
+          <span>Hands-on labs</span>
+        </div>
+        <p class="teaching-note">Supported by NAIRR Classroom, No. NAIRR250481.</p>
+        <a class="teaching-button" href="https://sites.rutgers.edu/sun-lab/teach-chem542/">Course webpage</a>
+      </div>
+      <div class="teaching-logo-panel">
+        <img class="teaching-logo" src="{{ '/assets/images/teaching/course_logo2.png' | relative_url }}" alt="CHEM 487/542 Chemical Data Science course logo">
+      </div>
     </div>
-    <div class="teaching-meta">
-      <span>Machine learning</span>
-      <span>Chemical data</span>
-      <span>Hands-on labs</span>
-    </div>
-    <p class="teaching-note">Supported by NAIRR Classroom, No. NAIRR250481.</p>
-    <a class="teaching-button" href="https://sites.rutgers.edu/sun-lab/teach-chem542/">Course webpage</a>
   </article>
 
   <article class="teaching-card">
