@@ -6,7 +6,7 @@ description: Faculty, students, and collaborators in the research group.
 full_width: true
 ---
 
-{% assign member_groups = "pi|PI;postdoc|Postdocs;graduate|Graduate Students;master|Master Students;undergraduate|Undergraduate Students" | split: ";" %}
+{% assign member_groups = "pi|Principal Investigator;postdoc|Postdocs;graduate|Graduate Students;master|Master Students;undergraduate|Undergraduate Students" | split: ";" %}
 {% assign alumni_page = site.pages | where: "path", "pages/alumni.md" | first %}
 
 {% for group in member_groups %}

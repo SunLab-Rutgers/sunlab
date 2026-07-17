@@ -2,11 +2,16 @@
 layout: page
 title: Research
 permalink: /research/
-description: Our work combines systems, human-computer interaction, visualization, and applied AI.
+description: Computational tools for chemistry, materials science, quantum materials, and renewable energy.
 ---
 
+<div class="research-summary">
+  <p>We develop and apply computational tools to tackle challenging problems in chemistry and materials science. Our research is highly interdisciplinary, integrating quantum chemistry, machine learning, condensed matter theory, and quantum information. We apply our computational frameworks to discover next-generation renewable energy solutions, addressing the energy crisis and environmental challenges. We also design quantum materials with exotic physical properties, aiming to lay the foundation for the next technological revolution.</p>
+</div>
+
 <div class="project-grid">
-  {% for project in site.data.projects %}
+  {% assign projects = site.research | sort: "order" %}
+  {% for project in projects %}
     <article class="card">
       {% if project.image %}
         <img class="card-figure" src="{{ project.image | relative_url }}" alt="">

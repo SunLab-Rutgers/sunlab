@@ -58,10 +58,11 @@ description: We develop computational tools to accelerate the exploration and di
   <div class="container split">
     <div>
       <p class="eyebrow">Research</p>
-      <h2>Systems that support careful decisions under real constraints.</h2>
+      <h2>Computational tools for quantum chemistry and materials discovery.</h2>
     </div>
     <div class="stack">
-      {% for project in site.data.projects limit:3 %}
+      {% assign projects = site.research | sort: "order" %}
+      {% for project in projects limit:3 %}
         <article class="card">
           {% if project.image %}
             <img class="card-figure" src="{{ project.image | relative_url }}" alt="">
