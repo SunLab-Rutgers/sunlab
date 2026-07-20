@@ -55,11 +55,9 @@ description: We develop computational tools to accelerate the exploration and di
 </section>
 
 <section class="section">
-  <div class="container split">
-    <div>
-      <a class="eyebrow eyebrow-link" href="{{ '/research/' | relative_url }}">Research</a>
-    </div>
-    <div class="stack">
+  <div class="container home-research">
+    <a class="eyebrow eyebrow-link" href="{{ '/research/' | relative_url }}">Research</a>
+    <div class="project-grid">
       {% assign projects = site.research | sort: "order" %}
       {% for project in projects limit:3 %}
         <article class="card">

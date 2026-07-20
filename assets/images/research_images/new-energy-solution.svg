@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title">
+  <title id="title">New energy solution</title>
+  <rect width="900" height="520" fill="#f7f2ea"/>
+  <path d="M0 360 C150 300 260 405 410 340 S690 250 900 320 V520 H0 Z" fill="#eadfce"/>
+  <g fill="none" stroke="#0d2640" stroke-width="12" stroke-linecap="round">
+    <path d="M370 380 L470 140 L430 275 H540 L415 455 L455 315 H345 Z"/>
+  </g>
+  <g fill="#cc0033">
+    <circle cx="245" cy="205" r="42"/>
+    <circle cx="650" cy="210" r="32"/>
+  </g>
+  <g stroke="#cc0033" stroke-width="6" stroke-linecap="round">
+    <path d="M245 120 V85 M245 325 V290 M160 205 H125 M365 205 H330"/>
+    <path d="M185 145 L160 120 M305 265 L330 290 M305 145 L330 120 M185 265 L160 290"/>
+  </g>
+</svg>

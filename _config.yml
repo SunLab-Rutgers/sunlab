@@ -27,6 +27,9 @@ nav:
     url: /publications/
   - title: Teaching
     url: /teaching/
+    children:
+      - title: Chemical Data Science
+        url: /teaching/chemical-data-science/
   - title: News
     url: /news/
   - title: Contact

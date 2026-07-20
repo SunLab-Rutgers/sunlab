@@ -19,7 +19,7 @@ description: Courses, guest lectures, and teaching materials from the Sun Lab.
           <span>Hands-on labs</span>
         </div>
         <p class="teaching-note">Supported by NAIRR Classroom, No. NAIRR250481.</p>
-        <a class="teaching-button" href="https://sites.rutgers.edu/sun-lab/teach-chem542/">Course webpage</a>
+        <a class="teaching-button" href="{{ '/teaching/chemical-data-science/' | relative_url }}">Course webpage</a>
       </div>
       <div class="teaching-logo-panel">
         <img class="teaching-logo" src="{{ '/assets/images/teaching/chem542_logo.png' | relative_url }}" alt="CHEM 487/542 Chemical Data Science course logo">

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title">
+  <title id="title">Quantum materials</title>
+  <rect width="900" height="520" fill="#efe4d2"/>
+  <g stroke="#0d2640" stroke-width="4">
+    <path d="M190 180 L330 110 L470 180 L610 110 L750 180"/>
+    <path d="M190 340 L330 270 L470 340 L610 270 L750 340"/>
+    <path d="M190 180 L190 340 M330 110 L330 270 M470 180 L470 340 M610 110 L610 270 M750 180 L750 340"/>
+  </g>
+  <g fill="#f7f2ea" stroke="#cc0033" stroke-width="8">
+    <circle cx="330" cy="270" r="34"/>
+    <circle cx="470" cy="180" r="34"/>
+    <circle cx="610" cy="270" r="34"/>
+  </g>
+  <g fill="#0d2640">
+    <circle cx="190" cy="180" r="18"/>
+    <circle cx="330" cy="110" r="18"/>
+    <circle cx="610" cy="110" r="18"/>
+    <circle cx="750" cy="180" r="18"/>
+    <circle cx="190" cy="340" r="18"/>
+    <circle cx="470" cy="340" r="18"/>
+    <circle cx="750" cy="340" r="18"/>
+  </g>
+</svg>

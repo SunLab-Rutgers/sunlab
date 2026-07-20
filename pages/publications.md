@@ -18,11 +18,6 @@ description: Selected papers and research outputs.
   <div class="publication-list">
     {% for pub in pubs %}
     <article class="publication{% if pub.image %} publication-with-image{% endif %}">
-      {% if pub.image %}
-      <div class="publication-figure">
-        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
-      </div>
-      {% endif %}
       <p class="pub-year">{{ pub.year }}</p>
       <div>
         <h3>{{ pub.title }}</h3>
@@ -34,6 +29,11 @@ description: Selected papers and research outputs.
           {% endfor %}
         </p>
       </div>
+      {% if pub.image %}
+      <div class="publication-figure">
+        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
+      </div>
+      {% endif %}
     </article>
     {% endfor %}
   </div>

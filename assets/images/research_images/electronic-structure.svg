@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title">
+  <title id="title">Electronic structure</title>
+  <rect width="900" height="520" fill="#f7f2ea"/>
+  <g fill="none" stroke="#b8c3ce" stroke-width="3">
+    <path d="M155 280 C250 120 370 120 455 280 S675 440 760 280"/>
+    <path d="M155 240 C250 400 370 400 455 240 S675 80 760 240"/>
+    <path d="M170 260 H740"/>
+  </g>
+  <g fill="#0d2640">
+    <circle cx="220" cy="260" r="28"/>
+    <circle cx="450" cy="260" r="34"/>
+    <circle cx="680" cy="260" r="28"/>
+  </g>
+  <g fill="#cc0033">
+    <circle cx="315" cy="170" r="13"/>
+    <circle cx="560" cy="352" r="13"/>
+    <circle cx="602" cy="155" r="10"/>
+  </g>
+</svg>

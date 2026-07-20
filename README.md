@@ -1,6 +1,9 @@
 # Sun Lab Website
 
-Static research group website built with Jekyll.
+Static research group website built with Jekyll. The website is hosted by `www.chongsun.org`
+
+Designed by Chong Sun <sunchong137@gmail.com>
+
 
 ## Run Locally
 
