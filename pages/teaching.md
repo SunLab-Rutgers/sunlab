@@ -22,7 +22,7 @@ description: Courses, guest lectures, and teaching materials from the Sun Lab.
         <a class="teaching-button" href="https://sites.rutgers.edu/sun-lab/teach-chem542/">Course webpage</a>
       </div>
       <div class="teaching-logo-panel">
-        <img class="teaching-logo" src="{{ '/assets/images/teaching/course_logo2.png' | relative_url }}" alt="CHEM 487/542 Chemical Data Science course logo">
+        <img class="teaching-logo" src="{{ '/assets/images/teaching/chem542_logo.png' | relative_url }}" alt="CHEM 487/542 Chemical Data Science course logo">
       </div>
     </div>
   </article>

@@ -1112,11 +1112,12 @@ h3 {
 }
 
 .publication-with-image {
-  grid-template-columns: 180px 72px 1fr;
+  grid-template-columns: 180px 72px minmax(0, 1fr);
   align-items: start;
 }
 
 .publication-figure {
+  width: 180px;
   overflow: hidden;
   border: 1px solid rgba(13, 38, 64, 0.1);
   border-radius: 8px;
@@ -1281,6 +1282,7 @@ h3 {
   }
 
   .publication-figure {
+    width: 100%;
     max-width: 260px;
   }
 }
