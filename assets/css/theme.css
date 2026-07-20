@@ -1,0 +1,58 @@
+:root {
+  /*
+    Sun Lab color theme.
+    Edit these hex codes to recolor the website.
+  */
+  --color-rutgers-red: #cc0033;
+  --color-milk: #fffdfa;
+  --color-beige: #f7f1e7;
+  --color-dark-beige: #f3eadc;
+  --color-menu-gray: #fbfcfb;
+  --color-ink: #102033;
+  --color-muted: #5a687a;
+  --color-line: #d7e1ec;
+  --color-blue: #236fae;
+  --color-light-blue: #4f8fcf;
+  --color-brand-gradient-end: #56a7de;
+  --color-soft-band: #fbf6ed;
+  --color-white: #ffffff;
+  --color-menu-background-translucent: rgba(251, 252, 251, 0.92);
+  --color-card-overlay-72: rgba(255, 255, 255, 0.72);
+  --color-card-overlay-64: rgba(255, 255, 255, 0.64);
+  --color-card-overlay-84: rgba(255, 255, 255, 0.84);
+  --color-card-overlay-58: rgba(255, 255, 255, 0.58);
+  --color-ink-overlay-20: rgba(16, 32, 51, 0.2);
+  --color-ink-border-10: rgba(13, 38, 64, 0.1);
+  --color-rutgers-red-border-26: rgba(204, 0, 51, 0.26);
+  --color-rutgers-red-overlay-08: rgba(204, 0, 51, 0.08);
+  --color-line-border-42: rgba(215, 225, 236, 0.42);
+
+  /*
+    Semantic tokens used by styles.css.
+    Usually you only need to edit the theme colors above.
+  */
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --line: var(--color-line);
+  --paper: var(--color-milk);
+  --soft: var(--color-beige);
+  --brand: var(--color-blue);
+  --brand-dark: var(--color-rutgers-red);
+  --accent: var(--color-light-blue);
+  --brand-gradient-end: var(--color-brand-gradient-end);
+  --accent-soft: var(--color-dark-beige);
+  --sky: var(--color-soft-band);
+  --menu-background: var(--color-menu-gray);
+  --menu-background-translucent: var(--color-menu-background-translucent);
+  --card-background: var(--color-white);
+  --card-overlay-72: var(--color-card-overlay-72);
+  --card-overlay-64: var(--color-card-overlay-64);
+  --card-overlay-84: var(--color-card-overlay-84);
+  --card-overlay-58: var(--color-card-overlay-58);
+  --ink-overlay-20: var(--color-ink-overlay-20);
+  --ink-border-10: var(--color-ink-border-10);
+  --brand-border-26: var(--color-rutgers-red-border-26);
+  --brand-overlay-08: var(--color-rutgers-red-overlay-08);
+  --line-border-42: var(--color-line-border-42);
+  --shadow: 0 18px 45px rgba(16, 32, 51, 0.09);
+}
