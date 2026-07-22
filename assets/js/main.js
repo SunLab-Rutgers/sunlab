@@ -110,3 +110,114 @@ if (slideshow) {
   showSlide(0);
   start();
 }
+
+const searchRoot = document.querySelector("[data-search-root]");
+const searchInput = document.querySelector("[data-search-input]");
+const searchResults = document.querySelector("[data-search-results]");
+let searchIndex;
+
+const escapeHtml = (value) =>
+  value.replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;",
+  })[char]);
+
+const renderSearchResults = (query) => {
+  if (!searchResults) {
+    return;
+  }
+
+  const normalizedQuery = query.trim().toLowerCase();
+  searchResults.hidden = false;
+
+  if (!normalizedQuery) {
+    searchResults.innerHTML = '<p class="site-search-empty">Start typing to search.</p>';
+    return;
+  }
+
+  if (!searchIndex) {
+    searchResults.innerHTML = '<p class="site-search-empty">Loading search index...</p>';
+    return;
+  }
+
+  const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+  const matches = searchIndex
+    .map((item) => {
+      const haystack = `${item.title} ${item.type} ${item.text}`.toLowerCase();
+      const score = terms.reduce((total, term) => total + (haystack.includes(term) ? 1 : 0), 0);
+      return { ...item, score };
+    })
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score || a.title.localeCompare(b.title))
+    .slice(0, 8);
+
+  if (!matches.length) {
+    searchResults.innerHTML = '<p class="site-search-empty">No results found.</p>';
+    return;
+  }
+
+  searchResults.innerHTML = matches.map((item) => {
+    const text = item.text.length > 150 ? `${item.text.slice(0, 150)}...` : item.text;
+    return `
+      <a class="site-search-result" href="${item.url}">
+        <span>${escapeHtml(item.type)}</span>
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(text)}</p>
+      </a>
+    `;
+  }).join("");
+};
+
+const loadSearchIndex = async () => {
+  if (searchIndex) {
+    return;
+  }
+
+  const response = await fetch(searchInput.dataset.searchIndex);
+  searchIndex = await response.json();
+};
+
+const updateSearch = async () => {
+  if (!searchInput || !searchResults) {
+    return;
+  }
+
+  try {
+    await loadSearchIndex();
+    renderSearchResults(searchInput.value);
+  } catch {
+    if (searchResults) {
+      searchResults.innerHTML = '<p class="site-search-empty">Search is unavailable right now.</p>';
+    }
+  }
+};
+
+const closeSearch = () => {
+  if (searchResults) {
+    searchResults.hidden = true;
+  }
+};
+
+if (searchRoot && searchInput && searchResults) {
+  searchInput.addEventListener("focus", updateSearch);
+  searchInput.addEventListener("input", updateSearch);
+  searchResults.addEventListener("click", (event) => {
+    if (event.target.closest(".site-search-result")) {
+      closeSearch();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!searchRoot.contains(event.target)) {
+      closeSearch();
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !searchResults.hidden) {
+      closeSearch();
+      searchInput.blur();
+    }
+  });
+}

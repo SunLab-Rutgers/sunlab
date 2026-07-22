@@ -34,6 +34,14 @@
           {% endif %}
         </div>
       {% endfor %}
+      <div class="site-search-form" role="search" data-search-root>
+        <span class="site-search-icon" aria-hidden="true">⌕</span>
+        <label class="sr-only" for="site-search-input">Search the website</label>
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search" autocomplete="off" data-search-input data-search-index="{{ '/search.json' | relative_url }}">
+        <div class="site-search-results" data-search-results hidden>
+          <p class="site-search-empty">Start typing to search.</p>
+        </div>
+      </div>
     </nav>
   </div>
 </header>

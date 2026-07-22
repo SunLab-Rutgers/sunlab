@@ -1,0 +1,74 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign first_item = true %}
+{% for page_item in site.pages %}
+  {% unless page_item.url contains "/search.json" or page_item.url contains "/404.html" %}
+    {% if page_item.title %}
+      {% unless first_item %},{% endunless %}
+      {
+        "title": {{ page_item.title | jsonify }},
+        "url": {{ page_item.url | relative_url | jsonify }},
+        "type": "Page",
+        "text": {{ page_item.content | strip_html | normalize_whitespace | jsonify }}
+      }
+      {% assign first_item = false %}
+    {% endif %}
+  {% endunless %}
+{% endfor %}
+{% for post in site.posts %}
+  {% unless first_item %},{% endunless %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
+    "type": "News",
+    "text": {{ post.content | strip_html | normalize_whitespace | jsonify }}
+  }
+  {% assign first_item = false %}
+{% endfor %}
+{% for person in site.members %}
+  {% unless first_item %},{% endunless %}
+  {
+    "title": {{ person.title | jsonify }},
+    "url": {{ person.url | relative_url | jsonify }},
+    "type": "People",
+    "text": {{ person.content | strip_html | normalize_whitespace | append: " " | append: person.role | append: " " | append: person.category | jsonify }}
+  }
+  {% assign first_item = false %}
+{% endfor %}
+{% for project in site.research %}
+  {% capture project_url %}/research/#{{ project.title | slugify }}{% endcapture %}
+  {% unless first_item %},{% endunless %}
+  {
+    "title": {{ project.title | jsonify }},
+    "url": {{ project_url | relative_url | jsonify }},
+    "type": "Research",
+    "text": {{ project.summary | append: " " | append: project.tags | strip_html | normalize_whitespace | jsonify }}
+  }
+  {% assign first_item = false %}
+{% endfor %}
+{% for pub in site.publications %}
+  {% capture pub_url %}/publications/#{{ pub.title | slugify }}{% endcapture %}
+  {% unless first_item %},{% endunless %}
+  {
+    "title": {{ pub.title | jsonify }},
+    "url": {{ pub_url | relative_url | jsonify }},
+    "type": "Publication",
+    "text": {{ pub.authors | append: " " | append: pub.venue | append: " " | append: pub.year | normalize_whitespace | jsonify }}
+  }
+  {% assign first_item = false %}
+{% endfor %}
+{% for doc in site.wiki %}
+  {% capture doc_url %}/wiki/#{{ doc.title | slugify }}{% endcapture %}
+  {% unless first_item %},{% endunless %}
+  {
+    "title": {{ doc.title | jsonify }},
+    "url": {{ doc_url | relative_url | jsonify }},
+    "type": "Wiki",
+    "text": {{ doc.summary | append: " " | append: doc.content | strip_html | normalize_whitespace | jsonify }}
+  }
+  {% assign first_item = false %}
+{% endfor %}
+]

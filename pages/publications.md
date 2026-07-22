@@ -17,7 +17,7 @@ description: Selected papers and research outputs.
   <h2>{{ group_label }}</h2>
   <div class="publication-list">
     {% for pub in pubs %}
-    <article class="publication{% if pub.image %} publication-with-image{% endif %}">
+    <article class="publication{% if pub.image %} publication-with-image{% endif %}" id="{{ pub.title | slugify }}">
       <p class="pub-year">{{ pub.year }}</p>
       <div>
         <h3>{{ pub.title }}</h3>

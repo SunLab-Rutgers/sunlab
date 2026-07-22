@@ -32,6 +32,8 @@ nav:
         url: /teaching/chemical-data-science/
   - title: News
     url: /news/
+  - title: Wiki
+    url: /wiki/
   - title: Contact
     url: /contact/
 
@@ -44,6 +46,8 @@ collections:
   research:
     output: false
   publications:
+    output: false
+  wiki:
     output: false
 
 defaults:

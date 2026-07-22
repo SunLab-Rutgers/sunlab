@@ -12,7 +12,7 @@ description: Computational tools for chemistry, materials science, quantum mater
 <div class="project-grid">
   {% assign projects = site.research | sort: "order" %}
   {% for project in projects %}
-    <article class="card">
+    <article class="card" id="{{ project.title | slugify }}">
       {% if project.image %}
         <img class="card-figure" src="{{ project.image | relative_url }}" alt="">
       {% endif %}
