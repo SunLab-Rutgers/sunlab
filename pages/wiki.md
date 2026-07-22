@@ -37,7 +37,6 @@ description: Group documentation, onboarding notes, and shared technical referen
         {% for doc in docs %}
           <article class="wiki-doc" id="{{ doc.title | slugify }}">
             <div class="wiki-doc-header">
-              <p>{{ doc.summary }}</p>
               <h3>{{ doc.title }}</h3>
             </div>
             <div class="wiki-doc-body">

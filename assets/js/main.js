@@ -221,3 +221,52 @@ if (searchRoot && searchInput && searchResults) {
     }
   });
 }
+
+const copyCode = async (text) => {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.top = "-9999px";
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  textArea.remove();
+};
+
+document.querySelectorAll(".wiki-doc-body pre").forEach((pre) => {
+  const code = pre.querySelector("code");
+
+  if (!code || pre.querySelector(".code-copy-button")) {
+    return;
+  }
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "code-copy-button";
+  button.textContent = "Copy";
+  button.setAttribute("aria-label", "Copy code");
+
+  button.addEventListener("click", async () => {
+    try {
+      await copyCode(code.textContent.trimEnd());
+      button.textContent = "Copied";
+      window.setTimeout(() => {
+        button.textContent = "Copy";
+      }, 1600);
+    } catch {
+      button.textContent = "Failed";
+      window.setTimeout(() => {
+        button.textContent = "Copy";
+      }, 1600);
+    }
+  });
+
+  pre.classList.add("has-copy-button");
+  pre.appendChild(button);
+});

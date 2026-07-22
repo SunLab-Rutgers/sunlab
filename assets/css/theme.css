@@ -8,6 +8,7 @@
   --color-beige: #f7f1e7;
   --color-dark-beige: #f3eadc;
   --color-menu-gray: #fbfcfb;
+  --color-terminal-purple: #300924;
   --color-ink: #102033;
   --color-muted: #5a687a;
   --color-line: #d7e1ec;
@@ -43,6 +44,7 @@
   --accent-soft: var(--color-dark-beige);
   --sky: var(--color-soft-band);
   --menu-background: var(--color-menu-gray);
+  --terminal-background: var(--color-terminal-purple);
   --menu-background-translucent: var(--color-menu-background-translucent);
   --card-background: var(--color-white);
   --card-overlay-72: var(--color-card-overlay-72);
