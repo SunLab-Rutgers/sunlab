@@ -1,7 +1,7 @@
 ---
 title: Group Node
 category: amarel
-order: 2
+order: 3
 summary: Sun Lab group node access, storage, and SLURM settings on Amarel.
 ---
 We have one CPU and one GPU node on Amarel dedicated to the Sun Lab. The partition name and project name are shared inside the group.
@@ -39,5 +39,8 @@ chgrp $(whoami) $YOUR_DIR_NAME
 Note that the last line is important so that other people cannot make changes to your files.
 
 ### Rules
-The group project directory should be used to keep important files, scripts, and outputs. For temporary computation outputs, use `/scratch/`.
+
+1. If you are not in hurry and the group node is full, use the free nodes on Amarel.
+2. Only use the GPU node when your job needs GPUs.
+3. The group project directory should be used to keep important files, scripts, and outputs. For temporary computation outputs, use `/scratch/`.
 You can use this path to share files with the group members putting the files outside of your private directory.

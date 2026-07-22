@@ -11,7 +11,7 @@ description: We develop computational tools to accelerate the exploration and di
       <p class="lede">We develop computational tools to accelerate the exploration and discovery of exotic quantum matters.</p>
       <div class="hero-actions">
         <a class="button primary" href="{{ '/research/' | relative_url }}">Explore Research</a>
-        <a class="button secondary" href="{{ '/contact/' | relative_url }}">Join or Collaborate</a>
+        <a class="button secondary" href="{{ '/contact/' | relative_url }}">Join Us</a>
       </div>
     </div>
     {% assign home_slides = site.static_files | where_exp: "file", "file.path contains '/assets/images/home_slides/'" | sort: "path" %}
