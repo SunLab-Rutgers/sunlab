@@ -3,6 +3,9 @@ title: Gaussian on Amarel
 category: scientific-packages
 order: 5
 summary: How to set up a Gaussian job helper script, work in scratch, submit jobs, and manage Gaussian files on Amarel.
+author: Laurence Giordano
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 These notes describe a clean workflow for running Gaussian jobs on Amarel.

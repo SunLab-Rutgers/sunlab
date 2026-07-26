@@ -3,6 +3,9 @@ title: Getting Started on Amarel
 category: amarel
 order: 1
 summary: Account access, login etiquette, interactive nodes, modules, support, and a starter SLURM submission file for Rutgers Amarel.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 [Amarel](https://it.rutgers.edu/research-computing/amarel/) is the campus-wide computational cluster offered by Rutgers. This page collects the basic steps for getting access, connecting to the cluster, using compute nodes responsibly, and submitting your first jobs.

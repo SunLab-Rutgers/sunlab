@@ -3,6 +3,9 @@ title: Common Terminal Commands
 category: amarel
 order: 0.5
 summary: Keyboard shortcuts, navigation, file operations, text viewing, search, and editor basics for terminal users.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 This wiki is copied and adapted from a GitHub Gist by Brad Traversy.

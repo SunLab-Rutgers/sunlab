@@ -3,6 +3,9 @@ title: Using VSCode with Amarel
 category: coding-and-version-control
 order: 2
 summary: How to connect Visual Studio Code to Amarel with Remote SSH on Windows, macOS, and Linux.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 Author: Laurence Giordano and Chelsea Sisule

@@ -3,6 +3,9 @@ title: Submitting Jobs on Amarel
 category: amarel
 order: 2
 summary: Software modules, useful SLURM commands, and a starter job submission script for Amarel.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 Read the Amarel instruction page carefully before submitting your first job.

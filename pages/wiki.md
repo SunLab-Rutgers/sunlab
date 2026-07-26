@@ -5,7 +5,7 @@ permalink: /wiki/
 description: Group documentation, onboarding notes, and shared technical references.
 ---
 
-{% assign categories = "amarel|Amarel,scientific-packages|Scientific Packages,coding-and-version-control|Coding and Version Control" | split: "," %}
+{% assign categories = "amarel|Amarel,scientific-packages|Scientific Packages,coding-and-version-control|Coding and Version Control,miscellaneous|Miscellaneous" | split: "," %}
 
 <div class="wiki-layout">
   <aside class="wiki-sidebar" aria-label="Wiki navigation">
@@ -38,6 +38,11 @@ description: Group documentation, onboarding notes, and shared technical referen
           <article class="wiki-doc" id="{{ doc.title | slugify }}">
             <div class="wiki-doc-header">
               <h3>{{ doc.title }}</h3>
+              <p class="wiki-doc-meta">
+                {% if doc.author %}<span>Author: {{ doc.author }}</span>{% endif %}
+                {% if doc.created %}<span>Created: {{ doc.created | date: "%b %-d, %Y" }}</span>{% endif %}
+                {% if doc.updated and doc.updated != doc.created %}<span>Revised: {{ doc.updated | date: "%b %-d, %Y" }}</span>{% endif %}
+              </p>
             </div>
             <div class="wiki-doc-body">
               {{ doc.content }}

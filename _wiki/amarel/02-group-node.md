@@ -3,6 +3,9 @@ title: Group Node
 category: amarel
 order: 3
 summary: Sun Lab group node access, storage, and SLURM settings on Amarel.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 We have one CPU and one GPU node on Amarel dedicated to the Sun Lab. The partition name and project name are shared inside the group.
 To be added to the group nodes, send a request to Chong. 

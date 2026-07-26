@@ -3,6 +3,9 @@ title: PyTorch on Amarel
 category: scientific-packages
 order: 3
 summary: How to create a PyTorch environment on Amarel for GPU jobs using CUDA 11.8.
+author: Laurence Giordano
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 These instructions create a PyTorch environment that runs on Amarel GPUs with CUDA 11.8. CUDA 11.8 is useful because some Amarel GPUs may not support CUDA 12.

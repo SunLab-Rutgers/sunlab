@@ -3,6 +3,9 @@ title: Terminal Basics
 category: amarel
 order: 0
 summary: A short introduction to terminals, shells, and startup files for working with remote clusters.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 A terminal is an essential platform for programmers. While IDEs are familiar and useful, a terminal is often more convenient for working with remote clusters.

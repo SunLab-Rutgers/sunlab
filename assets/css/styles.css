@@ -399,9 +399,19 @@ img {
 }
 
 .wiki-doc-header h3 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   color: var(--brand-dark);
   font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.wiki-doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.82rem;
   font-weight: 700;
 }
 
@@ -419,6 +429,18 @@ img {
   color: var(--ink);
   font-size: 0.98rem;
   font-weight: 800;
+}
+
+.wiki-doc-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 18px auto 26px;
+  border-radius: 8px;
+}
+
+.wiki-doc-body img:not([style]) {
+  width: min(100%, 420px);
 }
 
 .wiki-doc-body pre {

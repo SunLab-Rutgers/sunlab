@@ -3,6 +3,9 @@ title: Using GitHub
 category: coding-and-version-control
 order: 1
 summary: Basic Git commands, branch workflows, and GitHub account setup for group projects.
+author: Chong Sun
+created: 2026-07-26
+updated: 2026-07-26
 ---
 
 We use Git for version control and GitHub for sharing code, collaborating on projects, and keeping track of changes.
