@@ -5,7 +5,7 @@ permalink: /wiki/
 description: Group documentation, onboarding notes, and shared technical references.
 ---
 
-{% assign categories = "amarel|Amarel,scientific-packages|Scientific Packages,coding-and-version-control|Coding and Version Control,miscellaneous|Miscellaneous" | split: "," %}
+{% assign categories = "amarel|Amarel,scientific-packages|Scientific Packages,coding-and-version-control|Useful Tools,miscellaneous|Miscellaneous" | split: "," %}
 
 <div class="wiki-layout">
   <aside class="wiki-sidebar" aria-label="Wiki navigation">

@@ -1,7 +1,7 @@
 ---
 title: Using Overleaf
-category: miscellaneous
-order: 2
+category: coding-and-version-control
+order: 3
 summary: Minimum LaTeX basics for writing text, equations, and figures in Overleaf.
 author: Chong Sun
 created: 2026-07-26
