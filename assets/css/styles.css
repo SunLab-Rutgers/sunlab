@@ -739,6 +739,12 @@ h3 {
   padding: 24px;
 }
 
+.project-grid .card h2,
+.project-grid .card h3 {
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
 .card-figure {
   display: block;
   width: 100%;
@@ -747,6 +753,13 @@ h3 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   background: var(--soft);
+}
+
+.research-figure {
+  padding: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--paper);
 }
 
 .tags {
@@ -780,6 +793,22 @@ h3 {
   color: var(--muted);
   font-size: 1.06rem;
   line-height: 1.85;
+}
+
+.research-group + .research-group {
+  margin-top: 38px;
+}
+
+.research-group-title {
+  margin-bottom: 18px;
+  color: var(--brand-dark);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.research-page-grid.project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .teaching-intro {
@@ -1624,6 +1653,7 @@ h3 {
   .footer-grid,
   .news-grid,
   .project-grid,
+  .research-page-grid.project-grid,
   .teaching-grid,
   .join-grid,
   .join-columns,

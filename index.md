@@ -62,7 +62,7 @@ description: We develop computational tools to accelerate the exploration and di
       {% for project in projects limit:3 %}
         <article class="card">
           {% if project.image %}
-            <img class="card-figure" src="{{ project.image | relative_url }}" alt="">
+            <img class="card-figure research-figure" src="{{ project.image | relative_url }}" alt="">
           {% endif %}
           <h3>{{ project.title }}</h3>
           <p>{{ project.summary }}</p>
