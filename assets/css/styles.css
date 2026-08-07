@@ -1094,16 +1094,22 @@ h3 {
 
 .course-schedule {
   display: grid;
+  width: 100%;
   gap: 12px;
   margin-top: 18px;
 }
 
 .course-schedule-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   align-items: start;
   padding: 18px;
+}
+
+.course-schedule-row > div {
+  min-width: 0;
 }
 
 .course-schedule-row span {
