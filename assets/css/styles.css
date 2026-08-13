@@ -1562,6 +1562,18 @@ h3 {
   gap: 16px;
 }
 
+.publication-note {
+  max-width: 760px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.publication-note a {
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+
 .publication-section + .publication-section {
   margin-top: 46px;
 }
@@ -1581,12 +1593,12 @@ h3 {
 }
 
 .publication-with-image {
-  grid-template-columns: 72px minmax(0, 1fr) 180px;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(260px, 340px);
   align-items: start;
 }
 
 .publication-figure {
-  width: 180px;
+  width: 100%;
   overflow: hidden;
   border: 1px solid var(--ink-border-10);
   border-radius: 8px;
@@ -1596,14 +1608,63 @@ h3 {
 .publication-figure img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
 }
 
 .publication h3,
 .news-row h2,
 .person-card h2 {
   font-size: 1.25rem;
+}
+
+.publication h3 a,
+.publication-compact a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.publication h3 a:hover,
+.publication-compact a:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
+.publication-full-section {
+  padding-top: 4px;
+}
+
+.publication-full-list {
+  display: grid;
+  gap: 10px;
+}
+
+.publication-year-heading {
+  margin: 20px 0 4px;
+  color: var(--brand-dark);
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.publication-compact {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-border-42);
+}
+
+.publication-compact p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.publication-compact a {
+  font-weight: 800;
+}
+
+.publication-compact span {
+  display: block;
+  margin-top: 2px;
 }
 
 .news-row {
@@ -1795,7 +1856,7 @@ h3 {
 
   .publication-figure {
     width: 100%;
-    max-width: 260px;
+    max-width: 420px;
   }
 }
 
