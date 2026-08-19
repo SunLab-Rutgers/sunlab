@@ -12,7 +12,7 @@ description: Selected papers and research outputs.
 
 <section class="publication-section">
   <h2>Highlights</h2>
-  <div class="publication-list">
+  <div class="publication-feature-grid">
     {% for pub in pubs_by_year %}
     {% if pub.path contains "_publications/highlights/" %}
     {% assign paper_link = nil %}
@@ -21,23 +21,15 @@ description: Selected papers and research outputs.
         {% assign paper_link = link.url %}
       {% endif %}
     {% endfor %}
-    <article class="publication{% if pub.image %} publication-with-image{% endif %}" id="{{ pub.title | slugify }}">
-      <p class="pub-year">{{ pub.year }}</p>
-      <div>
-        <h3>{% if paper_link %}<a href="{{ paper_link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
-        <p>{{ pub.authors }}</p>
-        <p class="venue">{{ pub.venue }}</p>
-        <p class="pub-links">
-          {% for link in pub.links %}
-          <a href="{{ link.url }}">{{ link.label }}</a>
-          {% endfor %}
-        </p>
-      </div>
+    <article class="publication-feature-card" id="{{ pub.title | slugify }}">
+      <h3>{% if paper_link %}<a href="{{ paper_link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
       {% if pub.image %}
       <div class="publication-figure">
         <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
       </div>
       {% endif %}
+      {% if pub.summary %}<p class="publication-intro">{{ pub.summary }}</p>{% endif %}
+      <p class="publication-citation">{{ pub.authors }} {{ pub.title }}. {{ pub.venue }}.</p>
     </article>
     {% endif %}
     {% endfor %}
@@ -46,7 +38,7 @@ description: Selected papers and research outputs.
 
 <section class="publication-section">
   <h2>Recent Publications</h2>
-  <div class="publication-list">
+  <div class="publication-feature-grid">
     {% for pub in all_pubs %}
     {% if pub.path contains "_publications/recents/" %}
     {% assign paper_link = nil %}
@@ -55,18 +47,15 @@ description: Selected papers and research outputs.
         {% assign paper_link = link.url %}
       {% endif %}
     {% endfor %}
-    <article class="publication" id="{{ pub.title | slugify }}">
-      <p class="pub-year">{{ pub.year }}</p>
-      <div>
-        <h3>{% if paper_link %}<a href="{{ paper_link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
-        <p>{{ pub.authors }}</p>
-        <p class="venue">{{ pub.venue }}</p>
-        <p class="pub-links">
-          {% for link in pub.links %}
-          <a href="{{ link.url }}">{{ link.label }}</a>
-          {% endfor %}
-        </p>
+    <article class="publication-feature-card" id="{{ pub.title | slugify }}">
+      <h3>{% if paper_link %}<a href="{{ paper_link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
+      {% if pub.image %}
+      <div class="publication-figure">
+        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
       </div>
+      {% endif %}
+      {% if pub.summary %}<p class="publication-intro">{{ pub.summary }}</p>{% endif %}
+      <p class="publication-citation">{{ pub.authors }} {{ pub.title }}. {{ pub.venue }}.</p>
     </article>
     {% endif %}
     {% endfor %}
