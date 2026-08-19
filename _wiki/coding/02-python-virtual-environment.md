@@ -1,14 +1,12 @@
 ---
 title: Python Virtual Environment
-category: coding-and-version-control
-order: 4
+category: coding
+order: 2
 summary: How to set up a virtual environment for a project.
 author: Chong Sun
 created: 2026-08-19
 updated: 2026-08-19
 ---
-
-Author: Chong Sun
 
 A **virtual environment** creates an isolated Python installation for a project. It allows each project to have its own Python packages without interfering with other projects or the system Python.
 

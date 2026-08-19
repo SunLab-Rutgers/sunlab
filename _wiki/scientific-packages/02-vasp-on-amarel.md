@@ -1,7 +1,7 @@
 ---
 title: VASP on Amarel
 category: scientific-packages
-order: 2
+order: 1
 summary: Notes for setting up, compiling, and testing VASP on the Rutgers Amarel cluster.
 author: Chong Sun
 created: 2026-07-26

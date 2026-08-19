@@ -199,18 +199,20 @@ Wiki pages live in `_wiki/`. Each large wiki category has its own folder:
 
 ```text
 _wiki/amarel/
+_wiki/coding/
 _wiki/scientific-packages/
-_wiki/coding-and-version-control/
+_wiki/useful-tools/
+_wiki/miscellaneous/
 ```
 
 Example:
 
 ```markdown
 ---
-title: PyTorch on Amarel
-category: scientific-packages
-order: 3
-summary: How to create a PyTorch environment on Amarel.
+title: Python Environments
+category: coding
+order: 1
+summary: How to choose and manage reproducible Python environments.
 ---
 
 Write the guide here.
@@ -221,8 +223,10 @@ The `category` value must match one of the category keys used in `pages/wiki.md`
 Current category keys:
 
 - `amarel`
+- `coding`
 - `scientific-packages`
-- `coding-and-version-control`
+- `useful-tools`
+- `miscellaneous`
 
 Use `order` to control display order inside a category. Code blocks in wiki pages automatically receive copy buttons.
 

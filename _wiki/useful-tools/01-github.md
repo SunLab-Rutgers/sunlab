@@ -1,6 +1,6 @@
 ---
 title: Using GitHub
-category: coding-and-version-control
+category: useful-tools
 order: 1
 summary: Basic Git commands, branch workflows, and GitHub account setup for group projects.
 author: Chong Sun

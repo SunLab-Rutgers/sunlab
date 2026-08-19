@@ -1,15 +1,12 @@
 ---
-title: Python Environments with Miniconda
-category: coding-and-version-control
-order: 3
-summary: How to set up a conda environment.
+title: Python Environments
+category: coding
+order: 1
+summary: How to choose and manage reproducible Python environments, including Miniconda.
 author: Chong Sun
 created: 2026-08-19
 updated: 2026-08-19
 ---
-
-Author: Chong Sun
-
 
 [Conda](https://docs.conda.io/) is a package and environment manager. It is useful for scientific computing because it can manage both Python versions and software dependencies.
 

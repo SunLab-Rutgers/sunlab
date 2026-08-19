@@ -1,7 +1,7 @@
 ---
 title: Quantum ESPRESSO on Amarel
 category: scientific-packages
-order: 4
+order: 3
 summary: How to load Quantum ESPRESSO, organize pseudopotentials, and submit QE jobs on Amarel.
 author: Stanley Tan
 created: 2026-07-26
