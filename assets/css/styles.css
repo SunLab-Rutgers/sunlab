@@ -526,9 +526,9 @@ img {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(440px, 1.05fr);
+  grid-template-columns: minmax(320px, 0.8fr) minmax(520px, 1.2fr);
   align-items: center;
-  gap: 56px;
+  gap: 48px;
 }
 
 .eyebrow {
@@ -648,7 +648,7 @@ h3 {
 .hero-slide img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -761,6 +761,10 @@ h3 {
   aspect-ratio: 4 / 3;
   object-fit: contain;
   background: var(--paper);
+}
+
+.research-figure-cover {
+  object-fit: cover;
 }
 
 .tags {
@@ -1870,7 +1874,7 @@ h3 {
   }
 
   .hero-slide img {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
   }
 
   .section,

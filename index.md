@@ -7,7 +7,7 @@ description: We develop computational tools to accelerate the exploration and di
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <h1 class="hero-title">Accelerating Quantum Science with Theoretical Chemistry</h1>
+      <h1 class="hero-title">Accelerating Quantum Science and Discovery</h1>
       <p class="lede">We develop computational tools to accelerate the exploration and discovery of exotic quantum matters.</p>
       <div class="hero-actions">
         <a class="button primary" href="{{ '/research/' | relative_url }}">Explore Research</a>
@@ -62,7 +62,7 @@ description: We develop computational tools to accelerate the exploration and di
       {% for project in projects limit:3 %}
         <article class="card">
           {% if project.image %}
-            <img class="card-figure research-figure" src="{{ project.image | relative_url }}" alt="">
+            <img class="card-figure research-figure{% if project.image_fit == 'cover' %} research-figure-cover{% endif %}" src="{{ project.image | relative_url }}" alt="">
           {% endif %}
           <h3>{{ project.title }}</h3>
           <p>{{ project.summary }}</p>

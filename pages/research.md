@@ -17,7 +17,7 @@ description: Computational tools for chemistry, materials science, quantum mater
   {% for project in projects limit:3 %}
     <article class="card" id="{{ project.title | slugify }}">
       {% if project.image %}
-        <img class="card-figure research-figure" src="{{ project.image | relative_url }}" alt="">
+        <img class="card-figure research-figure{% if project.image_fit == 'cover' %} research-figure-cover{% endif %}" src="{{ project.image | relative_url }}" alt="">
       {% endif %}
       <h2>{{ project.title }}</h2>
       <p>{{ project.summary }}</p>
@@ -37,7 +37,7 @@ description: Computational tools for chemistry, materials science, quantum mater
   {% for project in projects offset:3 limit:3 %}
     <article class="card" id="{{ project.title | slugify }}">
       {% if project.image %}
-        <img class="card-figure research-figure" src="{{ project.image | relative_url }}" alt="">
+        <img class="card-figure research-figure{% if project.image_fit == 'cover' %} research-figure-cover{% endif %}" src="{{ project.image | relative_url }}" alt="">
       {% endif %}
       <h2>{{ project.title }}</h2>
       <p>{{ project.summary }}</p>
