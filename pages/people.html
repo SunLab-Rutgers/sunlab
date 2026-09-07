@@ -15,7 +15,7 @@ full_width: true
 {% assign group_label = group_parts[1] %}
 {% assign people = site.members | where: "category", group_key | sort: "date" %}
 {% if people.size > 0 %}
-<section class="people-section people-section-{{ group_key }}">
+<section class="people-section people-section-{{ group_key }}" id="{{ group_label | slugify }}">
   <div class="container">
   <h2>{{ group_label }}</h2>
   {% if group_key == "alumni" %}

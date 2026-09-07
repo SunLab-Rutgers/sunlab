@@ -23,6 +23,12 @@ nav:
     children:
       - title: Chong Sun
         url: /people/chong-sun/
+      - title: Postdocs
+        url: /people/#postdocs
+      - title: Graduate Students
+        url: /people/#graduate-students
+      - title: Undergrad Students
+        url: /people/#undergraduate-students
   - title: Publications
     url: /publications/
   - title: Teaching
