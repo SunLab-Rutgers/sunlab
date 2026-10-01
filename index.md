@@ -28,14 +28,20 @@ description: We develop computational tools to accelerate the exploration and di
         {% assign slide_ext = slide.extname | downcase %}
         {% if slide_ext == ".jpg" or slide_ext == ".jpeg" or slide_ext == ".png" or slide_ext == ".webp" or slide_ext == ".gif" or slide_ext == ".svg" %}
           {% assign home_slide_index = home_slide_index | plus: 1 %}
+          {% assign slide_filename = slide.path | split: "/" | last %}
+          {% assign slide_data = site.data.home_slides | where: "image", slide_filename | first %}
           <div class="hero-slide{% if home_slide_index == 1 %} is-active{% endif %}">
-            <img src="{{ slide.path | relative_url }}" alt="">
+            <img src="{{ slide.path | relative_url }}" alt="{{ slide_data.caption | default: '' }}">
+            {% if slide_data.caption %}
+              <p class="hero-slide-caption">{{ slide_data.caption }}</p>
+            {% endif %}
           </div>
         {% endif %}
       {% endfor %}
       {% if home_slide_count == 0 %}
         <div class="hero-slide is-active">
           <img src="{{ '/assets/images/hero-research.svg' | relative_url }}" alt="">
+          <p class="hero-slide-caption">Computational tools for quantum chemistry and materials discovery.</p>
         </div>
       {% endif %}
       {% if home_slide_count > 1 %}
