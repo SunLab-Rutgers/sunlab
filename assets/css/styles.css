@@ -637,12 +637,14 @@ h3 {
   position: absolute;
   inset: 0;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 600ms ease;
 }
 
 .hero-slide.is-active {
   position: relative;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .hero-slide img {
@@ -662,34 +664,45 @@ h3 {
   background: transparent;
 }
 
+.hero-slide-caption p {
+  margin: 0;
+}
+
+.hero-slide-caption a {
+  cursor: pointer;
+}
+
 .hero-slide-controls {
   position: absolute;
-  left: 50%;
+  right: 16px;
   bottom: 68px;
   display: flex;
-  gap: 8px;
+  gap: 7px;
   margin: 0;
-  padding: 8px;
+  padding: 7px;
   border: 1px solid var(--card-overlay-64);
   border-radius: 999px;
   background: var(--ink-overlay-20);
   backdrop-filter: blur(10px);
-  transform: translateX(-50%);
 }
 
 .hero-slide-controls button {
-  width: 11px;
-  height: 11px;
+  min-width: 24px;
+  height: 24px;
   padding: 0;
   border: 1px solid var(--card-overlay-84);
-  border-radius: 50%;
+  border-radius: 999px;
+  color: white;
   background: var(--card-overlay-58);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
   cursor: pointer;
 }
 
 .hero-slide-controls button.is-active {
-  width: 28px;
-  border-radius: 999px;
+  color: var(--brand-dark);
   background: white;
 }
 

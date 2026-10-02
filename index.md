@@ -31,9 +31,9 @@ description: We develop computational tools to accelerate the exploration and di
           {% assign slide_filename = slide.path | split: "/" | last %}
           {% assign slide_data = site.data.home_slides | where: "image", slide_filename | first %}
           <div class="hero-slide{% if home_slide_index == 1 %} is-active{% endif %}">
-            <img src="{{ slide.path | relative_url }}" alt="{{ slide_data.caption | default: '' }}">
+            <img src="{{ slide.path | relative_url }}" alt="{{ slide_data.caption | default: '' | markdownify | strip_html | strip }}">
             {% if slide_data.caption %}
-              <p class="hero-slide-caption">{{ slide_data.caption }}</p>
+              <div class="hero-slide-caption">{{ slide_data.caption | markdownify | replace: '<a href=', '<a target="_blank" rel="noopener" href=' }}</div>
             {% endif %}
           </div>
         {% endif %}
@@ -51,7 +51,7 @@ description: We develop computational tools to accelerate the exploration and di
             {% assign slide_ext = slide.extname | downcase %}
             {% if slide_ext == ".jpg" or slide_ext == ".jpeg" or slide_ext == ".png" or slide_ext == ".webp" or slide_ext == ".gif" or slide_ext == ".svg" %}
               {% assign home_slide_index = home_slide_index | plus: 1 %}
-              <button type="button"{% if home_slide_index == 1 %} class="is-active" aria-current="true"{% endif %} aria-label="Show slideshow image {{ home_slide_index }}"></button>
+              <button type="button"{% if home_slide_index == 1 %} class="is-active" aria-current="true"{% endif %} aria-label="Show slideshow image {{ home_slide_index }}">{{ home_slide_index }}</button>
             {% endif %}
           {% endfor %}
         </figcaption>

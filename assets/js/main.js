@@ -61,7 +61,7 @@ if (slideshow) {
   });
 
   slideshow.addEventListener("pointerdown", (event) => {
-    if (event.target.closest(".hero-slide-controls")) {
+    if (event.target.closest(".hero-slide-controls, .hero-slide-caption a")) {
       return;
     }
 
