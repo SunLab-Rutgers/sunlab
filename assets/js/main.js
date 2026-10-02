@@ -9,6 +9,25 @@ if (navToggle && siteNav) {
   });
 }
 
+document.querySelectorAll("a[href]").forEach((link) => {
+  const href = link.getAttribute("href");
+
+  if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+    return;
+  }
+
+  try {
+    const url = new URL(href, window.location.href);
+
+    if (url.origin !== window.location.origin) {
+      link.target = "_blank";
+      link.rel = "noopener";
+    }
+  } catch {
+    // Ignore malformed links and let the browser handle them normally.
+  }
+});
+
 const slideshow = document.querySelector(".hero-slideshow");
 
 if (slideshow) {

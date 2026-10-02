@@ -10,7 +10,7 @@ description: Announcements, awards, publications, and group updates.
     <article class="news-row">
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+      <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 }}</p>
     </article>
   {% endfor %}
 </div>

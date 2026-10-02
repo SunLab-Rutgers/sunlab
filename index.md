@@ -33,7 +33,7 @@ description: We develop computational tools to accelerate the exploration and di
           <div class="hero-slide{% if home_slide_index == 1 %} is-active{% endif %}">
             <img src="{{ slide.path | relative_url }}" alt="{{ slide_data.caption | default: '' | markdownify | strip_html | strip }}">
             {% if slide_data.caption %}
-              <div class="hero-slide-caption">{{ slide_data.caption | markdownify | replace: '<a href=', '<a target="_blank" rel="noopener" href=' }}</div>
+              <div class="hero-slide-caption">{{ slide_data.caption | markdownify }}</div>
             {% endif %}
           </div>
         {% endif %}
@@ -94,7 +94,7 @@ description: We develop computational tools to accelerate the exploration and di
         <article class="news-card">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
           <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+          <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 130 }}</p>
         </article>
       {% endfor %}
     </div>

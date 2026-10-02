@@ -10,6 +10,36 @@ description: Computational tools for chemistry, materials science, quantum mater
 </div>
 
 {% assign projects = site.research | sort: "order" %}
+{% assign highlighted_projects = projects | where: "highlight", true %}
+
+{% if highlighted_projects.size > 0 %}
+<section class="research-highlight-group">
+  <h2 class="research-group-title">Research Highlight</h2>
+  {% for project in highlighted_projects %}
+    <article class="research-highlight-card" id="{{ project.title | slugify }}">
+      {% if project.image %}
+        <img class="research-highlight-figure" src="{{ project.image | relative_url }}" alt="">
+      {% endif %}
+      <div>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.summary }}</p>
+        {% if project.links %}
+        <p class="research-links">
+          {% for link in project.links %}
+            <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+          {% endfor %}
+        </p>
+        {% endif %}
+        <div class="tags">
+          {% for tag in project.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</section>
+{% endif %}
 
 <section class="research-group">
   <h2 class="research-group-title">Systems we study</h2>
