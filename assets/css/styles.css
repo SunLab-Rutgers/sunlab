@@ -759,6 +759,16 @@ h3 {
   margin-top: 20px;
 }
 
+.home-highlight-list {
+  display: grid;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.home-research-highlight-card h2 {
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+}
+
 .card,
 .person-card,
 .news-card,

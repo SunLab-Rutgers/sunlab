@@ -62,23 +62,33 @@ description: We develop computational tools to accelerate the exploration and di
 
 <section class="section">
   <div class="container home-research">
-    <a class="eyebrow eyebrow-link" href="{{ '/research/' | relative_url }}">Research</a>
-    <div class="project-grid">
-      {% assign projects = site.research | sort: "order" %}
-      {% for project in projects limit:3 %}
-        <article class="card">
-          {% if project.image %}
-            <img class="card-figure research-figure{% if project.image_fit == 'cover' %} research-figure-cover{% endif %}" src="{{ project.image | relative_url }}" alt="">
-          {% endif %}
-          <h3>{{ project.title }}</h3>
+    <a class="eyebrow eyebrow-link" href="{{ '/research/' | relative_url }}">Research Highlights</a>
+    {% assign projects = site.research | sort: "order" %}
+    {% assign highlighted_projects = projects | where: "highlight", true %}
+    <div class="home-highlight-list">
+    {% for project in highlighted_projects %}
+      <article class="research-highlight-card home-research-highlight-card">
+        {% if project.image %}
+          <img class="research-highlight-figure" src="{{ project.image | relative_url }}" alt="">
+        {% endif %}
+        <div>
+          <h2>{{ project.title }}</h2>
           <p>{{ project.summary }}</p>
+          {% if project.links %}
+          <p class="research-links">
+            {% for link in project.links %}
+              <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+            {% endfor %}
+          </p>
+          {% endif %}
           <div class="tags">
             {% for tag in project.tags %}
               <span>{{ tag }}</span>
             {% endfor %}
           </div>
-        </article>
-      {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
     </div>
   </div>
 </section>
