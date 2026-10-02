@@ -5,8 +5,6 @@ permalink: /publications/
 description: Selected papers and research outputs.
 ---
 
-<p class="publication-note">The full publication list can be found on <a href="https://scholar.google.com/citations?user=KETTV4YAAAAJ&hl=en">Google Scholar</a>.</p>
-
 {% assign all_pubs = site.publications | sort: "added" | reverse %}
 {% assign pubs_by_year = site.publications | sort: "year" | reverse %}
 
@@ -15,32 +13,6 @@ description: Selected papers and research outputs.
   <div class="publication-feature-grid">
     {% for pub in pubs_by_year %}
     {% if pub.path contains "_publications/highlights/" %}
-    {% assign paper_link = nil %}
-    {% for link in pub.links %}
-      {% if link.label == "Paper" or link.label == "Patent" or link.label == "Thesis" %}
-        {% assign paper_link = link.url %}
-      {% endif %}
-    {% endfor %}
-    <article class="publication-feature-card" id="{{ pub.title | slugify }}">
-      <h3>{% if paper_link %}<a href="{{ paper_link }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</h3>
-      {% if pub.image %}
-      <div class="publication-figure">
-        <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }} figure">
-      </div>
-      {% endif %}
-      {% if pub.summary %}<p class="publication-intro">{{ pub.summary }}</p>{% endif %}
-      <p class="publication-citation">{{ pub.authors }} {{ pub.title }}. {{ pub.venue }}.</p>
-    </article>
-    {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
-<section class="publication-section">
-  <h2>Recent Publications</h2>
-  <div class="publication-feature-grid">
-    {% for pub in all_pubs %}
-    {% if pub.path contains "_publications/recents/" %}
     {% assign paper_link = nil %}
     {% for link in pub.links %}
       {% if link.label == "Paper" or link.label == "Patent" or link.label == "Thesis" %}
