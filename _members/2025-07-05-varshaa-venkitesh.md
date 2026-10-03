@@ -4,7 +4,7 @@ title: Varshaa Venkitesh
 role: Undergraduate Student
 category: undergraduate
 date: 2025-07-05
-focus: Electronic structure
+focus: Materials Design
 email: vv366@scarletmail.rutgers.edu
 office: CCB 4308
 image: /assets/images/member_photos/varshaa.png

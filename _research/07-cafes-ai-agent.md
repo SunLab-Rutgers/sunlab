@@ -1,6 +1,6 @@
 ---
 title: CAFES AI Agent
-summary: CAFES is an AI agent for targeting strongly correlated molecular, crystalline, and model Hamiltonian systems. Developed by Tenghui Li, the agent also streamlines dataset generation for many-body simulations.
+summary: CAFES is an AI agent for targeting strongly correlated molecular, crystalline, and model Hamiltonian systems. We have demostrated research-level applications with CAFES. The package is developed by Tenghui Li.
 image: /assets/images/research_images/cafes_overview.png
 order: 7
 highlight: true

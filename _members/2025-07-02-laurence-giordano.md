@@ -4,7 +4,7 @@ title: Laurence W. Giordano
 role: Graduate Student
 category: graduate
 date: 2025-07-02
-focus: Electronic structure
+focus: Electronic structure, graph neural networks
 email: laurence.w.giordano@rutgers.edu
 office: CCB 4308
 image: /assets/images/member_photos/laurence.jpg
