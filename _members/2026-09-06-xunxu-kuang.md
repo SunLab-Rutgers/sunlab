@@ -1,8 +1,8 @@
 ---
 name: Xunxu Kuang (Remote)
 title: Xunxu Kuang (Remote)
-role: Undergraduate Student
-category: undergraduate
+role: Visiting Scholar
+category: visiting
 date: 2026-09-06
 focus: Photocatalysis
 email: xk222@cam.ac.uk
