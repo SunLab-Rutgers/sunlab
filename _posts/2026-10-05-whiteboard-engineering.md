@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Whiteboard engineering
+title: New whiteboard
 summary: Laurence set up a new whiteboard against the aluminum frames with careful engineering. Theorists can have practical skills too!
 ---
 

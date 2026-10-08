@@ -3,12 +3,11 @@ title: Using VSCode with Amarel
 category: useful-tools
 order: 2
 summary: How to connect Visual Studio Code to Amarel with Remote SSH on Windows, macOS, and Linux.
-author: Chong Sun
+author: Laurence Giordano and Chelsea Sisule
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-10-08
 ---
 
-Author: Laurence Giordano and Chelsea Sisule
 
 Visual Studio Code, usually called VSCode, is a handy editor for coding. With the Remote SSH extension, you can edit files on Amarel from your local computer while using the VSCode interface.
 
@@ -18,7 +17,7 @@ Before setting this up, configure password-free SSH for Amarel. See [Terminal Ba
 
 Install [Visual Studio Code](https://code.visualstudio.com/).
 
-Some newer versions of VSCode may not connect cleanly to Amarel. Version 1.88 from March 2024 has worked, and version 1.96 from November 2024 has also worked.
+### Disable auto update
 
 Before setting up Remote SSH, turn off automatic updates so VSCode does not update itself into an incompatible version:
 
@@ -52,21 +51,21 @@ Remote-SSH: Connect to Host
 Enter your Amarel SSH command using your own NetID:
 
 ```bash
-ssh <NetID>@amarel.rutgers.edu
+ssh <NetID>@amarel-new.hpc.rutgers.edu
 ```
 
 VSCode may ask which SSH configuration file to use.
 
-On Windows, choose a path like:
-
-```text
-C:\Users\<you>\.ssh\config
-```
 
 On macOS and Linux, choose:
 
 ```bash
 ~/.ssh/config
+```
+
+On Windows, choose a path like:
+```text
+C:\Users\<you>\.ssh\config
 ```
 
 If VSCode asks for the remote platform, choose `Linux`. If there is a host key prompt, accept it.
@@ -76,6 +75,8 @@ After setup, connect through:
 ```text
 Remote-SSH: Connect to Host -> amarel.rutgers.edu
 ```
+
+You could also click on the `><` button on the lower left (under the gear button) to connect.
 
 ## Add Amarel Folders To Your Workspace
 
