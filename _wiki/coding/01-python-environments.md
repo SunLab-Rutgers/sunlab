@@ -3,14 +3,15 @@ title: Python Environments
 category: coding
 order: 1
 summary: How to choose and manage reproducible Python environments, including Miniconda.
-author: Chong Sun
+author: Chong Sun, Madison Wells
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-10-08
 ---
 
-[Conda](https://docs.conda.io/) is a package and environment manager. It is useful for scientific computing because it can manage both Python versions and software dependencies.
+[Conda](https://docs.conda.io/) is a package and environment manager. It is useful for scientific computing because it can manage both Python versions and software dependencies. For example, some packages may require a specific version of Python. By creating an environment, you can ensure that the versions of all your packages are compatible with one another. Once an environment is set up, you can activate it each time you want to work with those packages. 
 
 **Miniconda** is a minimal installation of Conda. It is generally sufficient for research computing and avoids installing the large collection of packages included with Anaconda.
+
 
 ## 1. Install Miniconda
 
@@ -18,7 +19,7 @@ Go to the official Miniconda download page:
 
 https://www.anaconda.com/docs/getting-started/miniconda/install
 
-For a Linux machine, first check the CPU architecture:
+For a Linux machine (such as Amarel), first check the CPU architecture:
 
 ```bash
 uname -m
@@ -71,22 +72,18 @@ You should see something similar to:
 ```text
 conda 25.x.x
 ```
+This means that Conda is installed correctly.
 
 ## 2. Create a Conda Environment
 
 Do not install research packages directly into the `base` environment.
 
-Instead, create a separate environment for each project:
+Instead, create a separate environment for each project. This will keep you organized.
+To create an environment:
 
 ```bash
 conda create -n my-project python=3.11
 ```
-
-Here:
-
-- `my-project` is the environment name.
-- `python=3.11` specifies the Python version.
-
 Conda will show the packages it plans to install. Enter:
 
 ```text
@@ -95,9 +92,20 @@ y
 
 to continue.
 
+Above:
+
+- `my-project` is the environment name.
+- `python=3.11` specifies the Python version.
+
+Keep your environment name short yet descriptive. This will be the keyword used to activate this particular environment.
+
+When selecting your Python version, ensure it is compatible with the packages you later want to install.
+
+
+
 ## 3. Activate the Environment
 
-Activate it with:
+Activate your environment with:
 
 ```bash
 conda activate my-project
@@ -108,6 +116,8 @@ The terminal prompt should change to something similar to:
 ```text
 (my-project) user@computer:~$
 ```
+
+Every time you want to switch environments, you must activate the environment you want to use. (see Section 6)
 
 Check the Python interpreter:
 
@@ -134,6 +144,8 @@ Packages can be installed using Conda:
 ```bash
 conda install numpy scipy matplotlib
 ```
+
+Above are three example packages to install (numpy, scipy, matplotlib).
 
 You can search for a package with:
 
@@ -244,7 +256,7 @@ code .
 
 In VS Code:
 
-1. Open the Command Palette with `Ctrl+Shift+P`.
+1. Open the Command Palette with `Ctrl+Shift+P` (`Cmd+Shift+P` on Mac).
 2. Search for `Python: Select Interpreter`.
 3. Select the interpreter associated with your Conda environment.
 
