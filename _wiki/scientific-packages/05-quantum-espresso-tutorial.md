@@ -1,5 +1,5 @@
 ---
-title: Quantum ESPRESSO tutorial
+title: QE for Band Structure
 category: scientific-packages
 order: 4
 summary: A Quantum ESPRESSO workflow for relaxing a structure and calculating its electronic band structure and density of states.
