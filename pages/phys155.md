@@ -6,8 +6,8 @@ description: PHYS 155 mini project on studying photocatalysis with computational
 ---
 
 <section class="course-panel">
-  <h2>Mini Project</h2>
-  <h3>Studying Photocatalysis with Computational Methods</h3>
+  <h2>PHYS 155: Introduction to Research</h2>
+  <h3>Mini Project: Studying Photocatalysis with Computational Methods</h3>
   <p>Photocatalysis is a process in which light energy helps a catalyst accelerate a chemical reaction. It has important applications in environmental cleanup and clean-energy technologies. Designing more efficient photocatalysts can reduce costs and improve energy-conversion efficiency.</p>
   <p>In this project, students study the electronic energy levels of materials, including the highest occupied molecular orbital (HOMO) and lowest unoccupied molecular orbital (LUMO), and use their energy difference to explore how a material may respond to light. The project provides an accessible introduction to computational physics, quantum mechanics, and materials science.</p>
 </section>
