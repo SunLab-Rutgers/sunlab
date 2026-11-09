@@ -32,10 +32,6 @@ description: Courses, guest lectures, and teaching materials from the Sun Lab.
     <h2>PHYS 155</h2>
     <p class="teaching-subtitle">Introduction to Research</p>
     <p>A mini project on using computational methods to study photocatalysts, electronic structure, and light-driven chemistry.</p>
-    <div class="teaching-meta">
-      <span>Computational physics</span>
-      <span>Materials science</span>
-    </div>
     <a class="teaching-button" href="{{ '/teaching/phys155/' | relative_url }}">Course webpage</a>
   </article>
 
