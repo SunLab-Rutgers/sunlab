@@ -28,6 +28,25 @@ description: Courses, guest lectures, and teaching materials from the Sun Lab.
   </article>
 
   <article class="teaching-card">
+    <p class="teaching-term">Co-instructor</p>
+    <h2>PHYS 155</h2>
+    <p class="teaching-subtitle">Introduction to Research</p>
+    <p class="teaching-subtitle">Mini project: Studying Photocatalysis with Computational Methods</p>
+    <p>Students learn how computational methods can be used to evaluate photocatalysts for environmental cleanup and clean-energy applications. The project introduces the basic mechanism of photocatalysis, Python programming in Jupyter notebooks, introductory density functional theory (DFT) calculations, and visualization and analysis of electronic energy levels such as the HOMO and LUMO.</p>
+    <div class="teaching-schedule">
+      <p><strong>Nov. 2, 2026</strong> — Introduction; <a href="https://pubs.acs.org/jpclcd/article/14/15/3712/361548/Toward-a-Rigorous-Theoretical-Description-of">reading assignment</a></p>
+      <p><strong>Nov. 9, 2026</strong> — Looking up and visualizing organic photocatalysts; <a href="https://colab.research.google.com/drive/1-2CieIerz73hpMG6fv95hvlaPPk5X-9D">Google Colab exercise</a></p>
+    </div>
+    <div class="teaching-meta">
+      <span>Python</span>
+      <span>Jupyter notebooks</span>
+      <span>Matplotlib</span>
+      <span>Materials modeling</span>
+      <span>DFT</span>
+    </div>
+  </article>
+
+  <article class="teaching-card">
     <p class="teaching-term">Guest Lectures</p>
     <h2>CHEM 521/421</h2>
     <p class="teaching-subtitle">Atomic and Molecular Structure</p>
