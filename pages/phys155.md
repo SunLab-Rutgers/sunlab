@@ -14,6 +14,7 @@ description: PHYS 155 mini project on studying photocatalysis with computational
 
 <section class="course-panel">
   <h2>Schedule and Course Materials</h2>
+  <p>Exercises prepared by Chong Sun and Xunxu Kuang.</p>
   <div class="course-schedule">
     <article class="course-schedule-row">
       <div>
@@ -33,6 +34,16 @@ description: PHYS 155 mini project on studying photocatalysis with computational
       <div>
         <span>Exercise</span>
         <div class="course-links"><a href="https://colab.research.google.com/drive/1-2CieIerz73hpMG6fv95hvlaPPk5X-9D">Google Colab notebook</a></div>
+      </div>
+    </article>
+    <article class="course-schedule-row">
+      <div>
+        <span>Nov. 16, 2026</span>
+        <h3>DFT-Calculated HOMO-LUMO Gap</h3>
+      </div>
+      <div>
+        <span>Exercise</span>
+        <div class="course-links"><a href="https://colab.research.google.com/drive/1mx3uikyGuxyEBn5gqTn0gLgDTqXxIGe1?usp=sharing">Google Colab notebook</a></div>
       </div>
     </article>
   </div>
