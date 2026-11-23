@@ -46,5 +46,15 @@ description: PHYS 155 mini project on studying photocatalysis with computational
         <div class="course-links"><a href="https://colab.research.google.com/drive/1mx3uikyGuxyEBn5gqTn0gLgDTqXxIGe1?usp=sharing">Google Colab notebook</a></div>
       </div>
     </article>
+    <article class="course-schedule-row">
+      <div>
+        <span>Nov. 23, 2026</span>
+        <h3>Loading and Visualizing a Crystal</h3>
+      </div>
+      <div>
+        <span>Exercise</span>
+        <div class="course-links"><a href="https://colab.research.google.com/drive/1o5wLpSqeSaMF47-J1Cl0wfp0W_2dADnU?usp=sharing">Google Colab notebook</a></div>
+      </div>
+    </article>
   </div>
 </section>
